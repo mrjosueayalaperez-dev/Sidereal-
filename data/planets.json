@@ -66,7 +66,70 @@
     "letters.short",
     "letters.long",
     "letters.saadia"
-   ]
+   ],
+   "esoteric": {
+    "hebrewLetter": {
+     "value": "ת",
+     "source": [
+      "777:I",
+      "Westcott1887",
+      "research-doc:§2"
+     ],
+     "status": "confirmed",
+     "system": "gd",
+     "variants": {
+      "gra": {
+       "value": "ב",
+       "source": [
+        "Kaplan1990",
+        "research-doc:§2"
+       ],
+       "status": "confirmed"
+      },
+      "short": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "long": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "saadia": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      }
+     }
+    },
+    "nameGematria": {
+     "value": 713,
+     "word": "שבתאי",
+     "method": "standard (mispar hechrachi)",
+     "source": [
+      "research-doc:§3"
+     ],
+     "status": "confirmed"
+    },
+    "tarot": {
+     "value": null,
+     "source": [
+      "777:XIV"
+     ],
+     "status": "UNCONFIRMED",
+     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+    }
+   }
   },
   {
    "id": "jupiter",
@@ -133,7 +196,70 @@
     "letters.long",
     "letters.saadia",
     "hexagram"
-   ]
+   ],
+   "esoteric": {
+    "hebrewLetter": {
+     "value": "כ",
+     "source": [
+      "777:I",
+      "Westcott1887",
+      "research-doc:§2"
+     ],
+     "status": "confirmed",
+     "system": "gd",
+     "variants": {
+      "gra": {
+       "value": "ג",
+       "source": [
+        "Kaplan1990",
+        "research-doc:§2"
+       ],
+       "status": "confirmed"
+      },
+      "short": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "long": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "saadia": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      }
+     }
+    },
+    "nameGematria": {
+     "value": 194,
+     "word": "צדק",
+     "method": "standard (mispar hechrachi)",
+     "source": [
+      "research-doc:§3"
+     ],
+     "status": "confirmed"
+    },
+    "tarot": {
+     "value": null,
+     "source": [
+      "777:XIV"
+     ],
+     "status": "UNCONFIRMED",
+     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+    }
+   }
   },
   {
    "id": "mars",
@@ -200,7 +326,70 @@
     "letters.long",
     "letters.saadia",
     "hexagram"
-   ]
+   ],
+   "esoteric": {
+    "hebrewLetter": {
+     "value": "פ",
+     "source": [
+      "777:I",
+      "Westcott1887",
+      "research-doc:§2"
+     ],
+     "status": "confirmed",
+     "system": "gd",
+     "variants": {
+      "gra": {
+       "value": "ד",
+       "source": [
+        "Kaplan1990",
+        "research-doc:§2"
+       ],
+       "status": "confirmed"
+      },
+      "short": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "long": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "saadia": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      }
+     }
+    },
+    "nameGematria": {
+     "value": 95,
+     "word": "מאדים",
+     "method": "standard (mispar hechrachi)",
+     "source": [
+      "research-doc:§3"
+     ],
+     "status": "confirmed"
+    },
+    "tarot": {
+     "value": null,
+     "source": [
+      "777:XIV"
+     ],
+     "status": "UNCONFIRMED",
+     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+    }
+   }
   },
   {
    "id": "sun",
@@ -268,7 +457,70 @@
     "letters.short",
     "letters.long",
     "letters.saadia"
-   ]
+   ],
+   "esoteric": {
+    "hebrewLetter": {
+     "value": "ר",
+     "source": [
+      "777:I",
+      "Westcott1887",
+      "research-doc:§2"
+     ],
+     "status": "confirmed",
+     "system": "gd",
+     "variants": {
+      "gra": {
+       "value": "כ",
+       "source": [
+        "Kaplan1990",
+        "research-doc:§2"
+       ],
+       "status": "confirmed"
+      },
+      "short": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "long": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "saadia": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      }
+     }
+    },
+    "nameGematria": {
+     "value": 640,
+     "word": "שמש",
+     "method": "standard (mispar hechrachi)",
+     "source": [
+      "research-doc:§3"
+     ],
+     "status": "confirmed"
+    },
+    "tarot": {
+     "value": null,
+     "source": [
+      "777:XIV"
+     ],
+     "status": "UNCONFIRMED",
+     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+    }
+   }
   },
   {
    "id": "venus",
@@ -335,7 +587,70 @@
     "letters.long",
     "letters.saadia",
     "hexagram"
-   ]
+   ],
+   "esoteric": {
+    "hebrewLetter": {
+     "value": "ד",
+     "source": [
+      "777:I",
+      "Westcott1887",
+      "research-doc:§2"
+     ],
+     "status": "confirmed",
+     "system": "gd",
+     "variants": {
+      "gra": {
+       "value": "פ",
+       "source": [
+        "Kaplan1990",
+        "research-doc:§2"
+       ],
+       "status": "confirmed"
+      },
+      "short": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "long": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "saadia": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      }
+     }
+    },
+    "nameGematria": {
+     "value": 64,
+     "word": "נוגה",
+     "method": "standard (mispar hechrachi)",
+     "source": [
+      "research-doc:§3"
+     ],
+     "status": "confirmed"
+    },
+    "tarot": {
+     "value": null,
+     "source": [
+      "777:XIV"
+     ],
+     "status": "UNCONFIRMED",
+     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+    }
+   }
   },
   {
    "id": "mercury",
@@ -402,7 +717,70 @@
     "letters.long",
     "letters.saadia",
     "hexagram"
-   ]
+   ],
+   "esoteric": {
+    "hebrewLetter": {
+     "value": "ב",
+     "source": [
+      "777:I",
+      "Westcott1887",
+      "research-doc:§2"
+     ],
+     "status": "confirmed",
+     "system": "gd",
+     "variants": {
+      "gra": {
+       "value": "ר",
+       "source": [
+        "Kaplan1990",
+        "research-doc:§2"
+       ],
+       "status": "confirmed"
+      },
+      "short": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "long": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "saadia": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      }
+     }
+    },
+    "nameGematria": {
+     "value": 48,
+     "word": "כוכב",
+     "method": "standard (mispar hechrachi)",
+     "source": [
+      "research-doc:§3"
+     ],
+     "status": "confirmed"
+    },
+    "tarot": {
+     "value": null,
+     "source": [
+      "777:XIV"
+     ],
+     "status": "UNCONFIRMED",
+     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+    }
+   }
   },
   {
    "id": "moon",
@@ -470,7 +848,70 @@
     "letters.short",
     "letters.long",
     "letters.saadia"
-   ]
+   ],
+   "esoteric": {
+    "hebrewLetter": {
+     "value": "ג",
+     "source": [
+      "777:I",
+      "Westcott1887",
+      "research-doc:§2"
+     ],
+     "status": "confirmed",
+     "system": "gd",
+     "variants": {
+      "gra": {
+       "value": "ת",
+       "source": [
+        "Kaplan1990",
+        "research-doc:§2"
+       ],
+       "status": "confirmed"
+      },
+      "short": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "long": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "saadia": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      }
+     }
+    },
+    "nameGematria": {
+     "value": 87,
+     "word": "לבנה",
+     "method": "standard (mispar hechrachi)",
+     "source": [
+      "research-doc:§3"
+     ],
+     "status": "confirmed"
+    },
+    "tarot": {
+     "value": null,
+     "source": [
+      "777:XIV"
+     ],
+     "status": "UNCONFIRMED",
+     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+    }
+   }
   }
  ]
 }
