@@ -1,12 +1,57 @@
-import { helio } from './ephemeris.js';
+import { helio, geo, lowPrecision } from './ephemeris.js';
 import { drawOrrery, PLANETS } from './render/orrery.js';
+import { parse, serialize, createStore, SPEEDS } from './state.js';
+const presetsData = await (await fetch(new URL('../data/presets.json', import.meta.url))).json();
 const app = document.getElementById('app');
-app.innerHTML = `<section class="card"><canvas id="orrery" width="800" height="800" aria-label="Heliocentric orrery"></canvas></section>
-<section class="card" id="side"><h2>Now</h2><p id="when"></p><table id="pos"></table></section>`;
-const t = new Date();
-const positions = Object.fromEntries(PLANETS.map(id => [id, helio(id, t)]));
-const hits = drawOrrery(document.getElementById('orrery'), positions);
-document.getElementById('when').textContent = t.toISOString();
-document.getElementById('pos').innerHTML = '<tr><th>Body</th><th>Helio lon°</th><th>AU</th></tr>' +
-  PLANETS.map(id => `<tr><td>${id}</td><td>${positions[id].lon.toFixed(2)}</td><td>${positions[id].dist.toFixed(2)}</td></tr>`).join('');
-window.__sidereal = { t, positions, hits };
+app.innerHTML = `<section class="card">
+ <div class="row" role="group" aria-label="Time controls">
+  <label>Date/time <input id="dt" type="datetime-local" step="60"></label>
+  <select id="tz" aria-label="Time zone"><option value="utc">UTC</option><option value="local">Local</option></select>
+  <button id="now">Now</button>
+  <button id="rew" aria-label="Rewind">◀◀</button><button id="play" aria-label="Play">▶</button>
+  <select id="speed" aria-label="Speed per second">${Object.keys(SPEEDS).map(k => `<option value="${k}" ${k === '1d' ? 'selected' : ''}>${k}/s</option>`).join('')}</select>
+  <span id="prec"></span>
+ </div>
+ <div class="row" id="presetRow"><label>Preset <select id="preset"><option value="">—</option>${presetsData.presets.map(p => `<option value="${p.id}">${p.label} (${p.date})</option>`).join('')}</select></label>
+  <span id="presetInfo" class="muted"></span></div>
+ <p class="disclaimer" id="presetDisclaimer" role="note">${presetsData.disclaimer}</p>
+ <canvas id="orrery" width="800" height="800" aria-label="Orrery"></canvas></section>
+<section class="card" id="side"><h2 id="when"></h2><table id="pos"></table></section>`;
+const $ = id => document.getElementById(id);
+const init = parse(location.search); if (!init.t) init.t = new Date();
+const store = createStore(init); let rate = 0, last = 0, hits = [];
+const pad = n => String(n).padStart(2, '0');
+function toInput(t, tz) { const d = tz === 'utc' ? [t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate(), t.getUTCHours(), t.getUTCMinutes()] : [t.getFullYear(), t.getMonth(), t.getDate(), t.getHours(), t.getMinutes()];
+  return `${String(d[0]).padStart(4, '0')}-${pad(d[1] + 1)}-${pad(d[2])}T${pad(d[3])}:${pad(d[4])}`; }
+function fromInput(v, tz) { return tz === 'utc' ? new Date(v + ':00Z') : new Date(v); }
+export function positionsAt(t, view) {
+  if (view === 'geo') return Object.fromEntries(['sun', 'moon', 'mercury', 'venus', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'].map(id => [id, geo(id, t)]));
+  return Object.fromEntries(PLANETS.map(id => [id, helio(id, t)]));
+}
+function render(s) {
+  const pos = positionsAt(s.t, s.view);
+  hits = drawOrrery($('orrery'), pos, { centre: s.view === 'geo' ? 'earth' : 'sun', selected: s.sel });
+  if (document.activeElement !== $('dt')) $('dt').value = toInput(s.t, s.tz);
+  $('tz').value = s.tz; $('when').textContent = s.t.toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
+  $('prec').innerHTML = lowPrecision(s.t) ? '<span class="badge">low precision (outside 1800–2200)</span>' : '';
+  $('pos').innerHTML = '<tr><th>Body</th><th>Lon°</th><th>AU</th></tr>' + Object.entries(pos).map(([id, p]) => `<tr><td>${id}</td><td>${p.lon.toFixed(2)}</td><td>${p.dist.toFixed(3)}</td></tr>`).join('');
+  history.replaceState(null, '', '?' + serialize(s));
+  window.__sidereal = { state: s, positions: pos, hits, rate };
+}
+store.sub(render);
+$('dt').addEventListener('change', e => { const t = fromInput(e.target.value, store.get().tz); if (!isNaN(t)) store.set({ t }); });
+$('tz').addEventListener('change', e => store.set({ tz: e.target.value }));
+$('now').onclick = () => { rate = 0; store.set({ t: new Date() }); syncPlay(); };
+const speed = () => SPEEDS[$('speed').value];
+$('play').onclick = () => { rate = rate > 0 ? 0 : speed(); syncPlay(); };
+$('rew').onclick = () => { rate = rate < 0 ? 0 : -speed(); syncPlay(); };
+$('speed').onchange = () => { if (rate) rate = Math.sign(rate) * speed(); syncPlay(); };
+function syncPlay() { $('play').textContent = rate > 0 ? '❚❚' : '▶'; $('rew').textContent = rate < 0 ? '❚❚' : '◀◀'; last = performance.now(); if (rate) requestAnimationFrame(tick); }
+function tick(now) { if (!rate || document.hidden) return; const dt = (now - last) / 1000; last = now; store.set({ t: new Date(store.get().t.getTime() + rate * dt) }); requestAnimationFrame(tick); }
+document.addEventListener('visibilitychange', () => { if (!document.hidden && rate) syncPlay(); });
+$('preset').onchange = e => { const p = presetsData.presets.find(x => x.id === e.target.value); if (!p) return;
+  const t = p.tz === 'local' ? new Date(`${p.date}T${p.time}`) : new Date(`${p.date}T${p.time}:00Z`);
+  $('presetInfo').innerHTML = (p.figure || p.figureDraft || p.note || '') + (p.status === 'UNCONFIRMED' ? ' <span class="badge">UNCONFIRMED</span>' : '') + (p.sources[0]?.startsWith('http') ? ` <a href="${p.sources[0]}" target="_blank" rel="noopener">source</a>` : '');
+  rate = 0; syncPlay(); store.set({ t }); };
+export { store };
+render(store.get());
