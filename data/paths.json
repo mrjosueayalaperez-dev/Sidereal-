@@ -67,8 +67,8 @@
   {
    "n": 15,
    "letter": "ה",
-   "from": null,
-   "to": null,
+   "from": 2,
+   "to": 6,
    "attribution": {
     "type": "sign",
     "id": "aries"
@@ -82,21 +82,28 @@
    ],
    "sources": [
     "777:I",
-    "research-doc:§4"
+    "research-doc:§4",
+    "JAP:zelator-2026-10-27"
    ],
-   "confidence": "unconfirmed",
-   "draft": {
-    "from": 2,
-    "to": 6
-   },
-   "status": "UNCONFIRMED",
-   "note": "Connecting sephirot not verified against the 777 diagram; sources differ. Rendered dashed from research-doc draft."
+   "confidence": "confirmed",
+   "note": "Endpoints 2-6 confirmed by owner source JAP:zelator-2026-10-27 (22-path table, 'Tree connection'); matches the earlier research-doc draft.",
+   "endpoints": {
+    "value": [
+     2,
+     6
+    ],
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "tradition": "Hermetic Qabalah"
+   }
   },
   {
    "n": 16,
    "letter": "ו",
-   "from": null,
-   "to": null,
+   "from": 2,
+   "to": 4,
    "attribution": {
     "type": "sign",
     "id": "taurus"
@@ -104,15 +111,22 @@
    "variants": [],
    "sources": [
     "777:I",
-    "research-doc:§4"
+    "research-doc:§4",
+    "JAP:zelator-2026-10-27"
    ],
-   "confidence": "unconfirmed",
-   "draft": {
-    "from": 2,
-    "to": 4
-   },
-   "status": "UNCONFIRMED",
-   "note": "Connecting sephirot not verified against the 777 diagram; sources differ. Rendered dashed from research-doc draft."
+   "confidence": "confirmed",
+   "note": "Endpoints 2-4 confirmed by owner source JAP:zelator-2026-10-27 (22-path table, 'Tree connection'); matches the earlier research-doc draft.",
+   "endpoints": {
+    "value": [
+     2,
+     4
+    ],
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "tradition": "Hermetic Qabalah"
+   }
   },
   {
    "n": 17,
@@ -165,8 +179,8 @@
   {
    "n": 20,
    "letter": "י",
-   "from": null,
-   "to": null,
+   "from": 4,
+   "to": 6,
    "attribution": {
     "type": "sign",
     "id": "virgo"
@@ -174,15 +188,22 @@
    "variants": [],
    "sources": [
     "777:I",
-    "research-doc:§4"
+    "research-doc:§4",
+    "JAP:zelator-2026-10-27"
    ],
-   "confidence": "unconfirmed",
-   "draft": {
-    "from": 4,
-    "to": 6
-   },
-   "status": "UNCONFIRMED",
-   "note": "Connecting sephirot not verified against the 777 diagram; sources differ. Rendered dashed from research-doc draft."
+   "confidence": "confirmed",
+   "note": "Endpoints 4-6 confirmed by owner source JAP:zelator-2026-10-27 (22-path table, 'Tree connection'); matches the earlier research-doc draft.",
+   "endpoints": {
+    "value": [
+     4,
+     6
+    ],
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "tradition": "Hermetic Qabalah"
+   }
   },
   {
    "n": 21,
@@ -235,8 +256,8 @@
   {
    "n": 24,
    "letter": "נ",
-   "from": null,
-   "to": null,
+   "from": 6,
+   "to": 7,
    "attribution": {
     "type": "sign",
     "id": "scorpio"
@@ -244,21 +265,28 @@
    "variants": [],
    "sources": [
     "777:I",
-    "research-doc:§4"
+    "research-doc:§4",
+    "JAP:zelator-2026-10-27"
    ],
-   "confidence": "unconfirmed",
-   "draft": {
-    "from": 6,
-    "to": 7
-   },
-   "status": "UNCONFIRMED",
-   "note": "Connecting sephirot not verified against the 777 diagram; sources differ. Rendered dashed from research-doc draft."
+   "confidence": "confirmed",
+   "note": "Endpoints 6-7 confirmed by owner source JAP:zelator-2026-10-27 (22-path table, 'Tree connection'); matches the earlier research-doc draft.",
+   "endpoints": {
+    "value": [
+     6,
+     7
+    ],
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "tradition": "Hermetic Qabalah"
+   }
   },
   {
    "n": 25,
    "letter": "ס",
-   "from": null,
-   "to": null,
+   "from": 6,
+   "to": 9,
    "attribution": {
     "type": "sign",
     "id": "sagittarius"
@@ -266,15 +294,22 @@
    "variants": [],
    "sources": [
     "777:I",
-    "research-doc:§4"
+    "research-doc:§4",
+    "JAP:zelator-2026-10-27"
    ],
-   "confidence": "unconfirmed",
-   "draft": {
-    "from": 6,
-    "to": 9
-   },
-   "status": "UNCONFIRMED",
-   "note": "Connecting sephirot not verified against the 777 diagram; sources differ. Rendered dashed from research-doc draft."
+   "confidence": "confirmed",
+   "note": "Endpoints 6-9 confirmed by owner source JAP:zelator-2026-10-27 (22-path table, 'Tree connection'); matches the earlier research-doc draft.",
+   "endpoints": {
+    "value": [
+     6,
+     9
+    ],
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "tradition": "Hermetic Qabalah"
+   }
   },
   {
    "n": 26,

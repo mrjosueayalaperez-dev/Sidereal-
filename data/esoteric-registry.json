@@ -18,5 +18,18 @@
    "label": "Tarot",
    "format": "text"
   }
- ]
+ ],
+ "sources": {
+  "JAP:zelator-2026-10-27": {
+   "status": "confirmed-by-owner",
+   "label": "Zelator study package (owner), 27 Oct 2026",
+   "data": "data/zelator.json",
+   "traditions": [
+    "Jewish Kabbalah",
+    "Hermetic Qabalah",
+    "Personal interpretation"
+   ],
+   "note": "Reference data only. Hebrew language, Jewish Kabbalah, Hermetic Qabalah, astrology and personal interpretation are separate traditions; they overlap in some modern practices but are not interchangeable."
+  }
+ }
 }

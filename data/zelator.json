@@ -1,0 +1,2610 @@
+{
+ "source": "JAP:zelator-2026-10-27",
+ "status": "confirmed-by-owner",
+ "traditionsNote": "Distinguish Hebrew language, Jewish Kabbalah, Hermetic Qabalah, astrology and personal interpretation. These traditions overlap in some modern practices but are not interchangeable.",
+ "traditions": [
+  "Jewish Kabbalah",
+  "Hermetic Qabalah",
+  "Personal interpretation"
+ ],
+ "scope": "Reference data only (sephiroth names/meanings, 22 paths, gematria methods, Moon/Monday, Heh/Zayin/Cheth facts). Personal practice material from the source package is intentionally excluded.",
+ "pathsNote": {
+  "value": "Golden Dawn style; path number = 11 + letter index; connections use sephiroth numbers. Letter images are traditional Hermetic study glosses, not a complete account of historical letter-name etymology. Strength/Justice numbering follows the Rider-Waite-Smith convention; other decks differ; Crowley exchanges Heh/Tzaddi attributions.",
+  "tradition": "Hermetic Qabalah",
+  "source": [
+   "JAP:zelator-2026-10-27"
+  ],
+  "status": "confirmed-by-owner",
+  "page": 4
+ },
+ "pillarsNote": {
+  "value": "The three pillars are often called severity (left), mercy (right), and mildness or balance (middle); left and right refer to the diagram as viewed.",
+  "tradition": "Hermetic Qabalah",
+  "source": [
+   "JAP:zelator-2026-10-27"
+  ],
+  "status": "confirmed-by-owner",
+  "page": 3
+ },
+ "daath": {
+  "value": "Da'ath: knowledge; not an additional numbered sephirah in this arrangement.",
+  "tradition": "Hermetic Qabalah",
+  "source": [
+   "JAP:zelator-2026-10-27"
+  ],
+  "status": "confirmed-by-owner",
+  "page": 2
+ },
+ "sephiroth": [
+  {
+   "n": 1,
+   "name": {
+    "value": "Kether",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   },
+   "meaning": {
+    "value": "Crown; first principle",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   }
+  },
+  {
+   "n": 2,
+   "name": {
+    "value": "Chokmah",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   },
+   "meaning": {
+    "value": "Wisdom; dynamic inspiration",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   }
+  },
+  {
+   "n": 3,
+   "name": {
+    "value": "Binah",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   },
+   "meaning": {
+    "value": "Understanding; form",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   }
+  },
+  {
+   "n": 4,
+   "name": {
+    "value": "Chesed",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   },
+   "meaning": {
+    "value": "Lovingkindness; generosity",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   }
+  },
+  {
+   "n": 5,
+   "name": {
+    "value": "Geburah",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   },
+   "meaning": {
+    "value": "Strength; judgment",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   }
+  },
+  {
+   "n": 6,
+   "name": {
+    "value": "Tiphareth",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   },
+   "meaning": {
+    "value": "Beauty; harmony",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   }
+  },
+  {
+   "n": 7,
+   "name": {
+    "value": "Netzach",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   },
+   "meaning": {
+    "value": "Victory; endurance",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   }
+  },
+  {
+   "n": 8,
+   "name": {
+    "value": "Hod",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   },
+   "meaning": {
+    "value": "Splendor; articulation",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   }
+  },
+  {
+   "n": 9,
+   "name": {
+    "value": "Yesod",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   },
+   "meaning": {
+    "value": "Foundation",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   }
+  },
+  {
+   "n": 10,
+   "name": {
+    "value": "Malkuth",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   },
+   "meaning": {
+    "value": "Kingdom",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 3
+   }
+  }
+ ],
+ "paths": [
+  {
+   "index": 0,
+   "n": {
+    "value": 11,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letter": {
+    "value": "א",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letterName": {
+    "value": "Aleph",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "value": {
+    "value": 1,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "tarot": {
+    "value": "0 Fool",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "symbol": {
+    "value": "Ox",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "attribution": {
+    "value": "Air",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "treeConnection": {
+    "value": [
+     1,
+     2
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   }
+  },
+  {
+   "index": 1,
+   "n": {
+    "value": 12,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letter": {
+    "value": "ב",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letterName": {
+    "value": "Beth",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "value": {
+    "value": 2,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "tarot": {
+    "value": "I Magician",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "symbol": {
+    "value": "House",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "attribution": {
+    "value": "Mercury",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "treeConnection": {
+    "value": [
+     1,
+     3
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   }
+  },
+  {
+   "index": 2,
+   "n": {
+    "value": 13,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letter": {
+    "value": "ג",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letterName": {
+    "value": "Gimel",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "value": {
+    "value": 3,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "tarot": {
+    "value": "II High Priestess",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "symbol": {
+    "value": "Camel",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "attribution": {
+    "value": "Moon",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "treeConnection": {
+    "value": [
+     1,
+     6
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   }
+  },
+  {
+   "index": 3,
+   "n": {
+    "value": 14,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letter": {
+    "value": "ד",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letterName": {
+    "value": "Daleth",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "value": {
+    "value": 4,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "tarot": {
+    "value": "III Empress",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "symbol": {
+    "value": "Door",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "attribution": {
+    "value": "Venus",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "treeConnection": {
+    "value": [
+     2,
+     3
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   }
+  },
+  {
+   "index": 4,
+   "n": {
+    "value": 15,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letter": {
+    "value": "ה",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letterName": {
+    "value": "Heh",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "value": {
+    "value": 5,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "tarot": {
+    "value": "IV Emperor",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "symbol": {
+    "value": "Window",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "attribution": {
+    "value": "Aries",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "treeConnection": {
+    "value": [
+     2,
+     6
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   }
+  },
+  {
+   "index": 5,
+   "n": {
+    "value": 16,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letter": {
+    "value": "ו",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letterName": {
+    "value": "Vav",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "value": {
+    "value": 6,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "tarot": {
+    "value": "V Hierophant",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "symbol": {
+    "value": "Nail / hook",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "attribution": {
+    "value": "Taurus",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "treeConnection": {
+    "value": [
+     2,
+     4
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   }
+  },
+  {
+   "index": 6,
+   "n": {
+    "value": 17,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letter": {
+    "value": "ז",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letterName": {
+    "value": "Zayin",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "value": {
+    "value": 7,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "tarot": {
+    "value": "VI Lovers",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "symbol": {
+    "value": "Sword",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "attribution": {
+    "value": "Gemini",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "treeConnection": {
+    "value": [
+     3,
+     6
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   }
+  },
+  {
+   "index": 7,
+   "n": {
+    "value": 18,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letter": {
+    "value": "ח",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letterName": {
+    "value": "Cheth",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "value": {
+    "value": 8,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "tarot": {
+    "value": "VII Chariot",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "symbol": {
+    "value": "Fence",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "attribution": {
+    "value": "Cancer",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "treeConnection": {
+    "value": [
+     3,
+     5
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   }
+  },
+  {
+   "index": 8,
+   "n": {
+    "value": 19,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letter": {
+    "value": "ט",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letterName": {
+    "value": "Teth",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "value": {
+    "value": 9,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "tarot": {
+    "value": "VIII Strength",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "symbol": {
+    "value": "Serpent",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "attribution": {
+    "value": "Leo",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "treeConnection": {
+    "value": [
+     4,
+     5
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   }
+  },
+  {
+   "index": 9,
+   "n": {
+    "value": 20,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letter": {
+    "value": "י",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letterName": {
+    "value": "Yod",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "value": {
+    "value": 10,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "tarot": {
+    "value": "IX Hermit",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "symbol": {
+    "value": "Hand",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "attribution": {
+    "value": "Virgo",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "treeConnection": {
+    "value": [
+     4,
+     6
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   }
+  },
+  {
+   "index": 10,
+   "n": {
+    "value": 21,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letter": {
+    "value": "כ",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "letterName": {
+    "value": "Kaph",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "value": {
+    "value": 20,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "tarot": {
+    "value": "X Wheel of Fortune",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "symbol": {
+    "value": "Palm",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "attribution": {
+    "value": "Jupiter",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "treeConnection": {
+    "value": [
+     4,
+     7
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   }
+  },
+  {
+   "index": 11,
+   "n": {
+    "value": 22,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letter": {
+    "value": "ל",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letterName": {
+    "value": "Lamed",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "value": {
+    "value": 30,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "tarot": {
+    "value": "XI Justice",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "symbol": {
+    "value": "Ox-goad",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "attribution": {
+    "value": "Libra",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "treeConnection": {
+    "value": [
+     5,
+     6
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   }
+  },
+  {
+   "index": 12,
+   "n": {
+    "value": 23,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letter": {
+    "value": "מ",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letterName": {
+    "value": "Mem",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "value": {
+    "value": 40,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "tarot": {
+    "value": "XII Hanged Man",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "symbol": {
+    "value": "Water",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "attribution": {
+    "value": "Water",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "treeConnection": {
+    "value": [
+     5,
+     8
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   }
+  },
+  {
+   "index": 13,
+   "n": {
+    "value": 24,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letter": {
+    "value": "נ",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letterName": {
+    "value": "Nun",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "value": {
+    "value": 50,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "tarot": {
+    "value": "XIII Death",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "symbol": {
+    "value": "Fish",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "attribution": {
+    "value": "Scorpio",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "treeConnection": {
+    "value": [
+     6,
+     7
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   }
+  },
+  {
+   "index": 14,
+   "n": {
+    "value": 25,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letter": {
+    "value": "ס",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letterName": {
+    "value": "Samekh",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "value": {
+    "value": 60,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "tarot": {
+    "value": "XIV Temperance",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "symbol": {
+    "value": "Support",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "attribution": {
+    "value": "Sagittarius",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "treeConnection": {
+    "value": [
+     6,
+     9
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   }
+  },
+  {
+   "index": 15,
+   "n": {
+    "value": 26,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letter": {
+    "value": "ע",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letterName": {
+    "value": "Ayin",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "value": {
+    "value": 70,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "tarot": {
+    "value": "XV Devil",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "symbol": {
+    "value": "Eye",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "attribution": {
+    "value": "Capricorn",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "treeConnection": {
+    "value": [
+     6,
+     8
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   }
+  },
+  {
+   "index": 16,
+   "n": {
+    "value": 27,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letter": {
+    "value": "פ",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letterName": {
+    "value": "Peh",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "value": {
+    "value": 80,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "tarot": {
+    "value": "XVI Tower",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "symbol": {
+    "value": "Mouth",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "attribution": {
+    "value": "Mars",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "treeConnection": {
+    "value": [
+     7,
+     8
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   }
+  },
+  {
+   "index": 17,
+   "n": {
+    "value": 28,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letter": {
+    "value": "צ",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letterName": {
+    "value": "Tzaddi",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "value": {
+    "value": 90,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "tarot": {
+    "value": "XVII Star",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "symbol": {
+    "value": "Fish-hook",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "attribution": {
+    "value": "Aquarius",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "treeConnection": {
+    "value": [
+     7,
+     9
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   }
+  },
+  {
+   "index": 18,
+   "n": {
+    "value": 29,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letter": {
+    "value": "ק",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letterName": {
+    "value": "Qoph",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "value": {
+    "value": 100,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "tarot": {
+    "value": "XVIII Moon",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "symbol": {
+    "value": "Back of head",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "attribution": {
+    "value": "Pisces",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "treeConnection": {
+    "value": [
+     7,
+     10
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   }
+  },
+  {
+   "index": 19,
+   "n": {
+    "value": 30,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letter": {
+    "value": "ר",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letterName": {
+    "value": "Resh",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "value": {
+    "value": 200,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "tarot": {
+    "value": "XIX Sun",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "symbol": {
+    "value": "Head",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "attribution": {
+    "value": "Sun",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "treeConnection": {
+    "value": [
+     8,
+     9
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   }
+  },
+  {
+   "index": 20,
+   "n": {
+    "value": 31,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letter": {
+    "value": "ש",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letterName": {
+    "value": "Shin",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "value": {
+    "value": 300,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "tarot": {
+    "value": "XX Judgment",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "symbol": {
+    "value": "Tooth",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "attribution": {
+    "value": "Fire",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "treeConnection": {
+    "value": [
+     8,
+     10
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   }
+  },
+  {
+   "index": 21,
+   "n": {
+    "value": 32,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letter": {
+    "value": "ת",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "letterName": {
+    "value": "Tav",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "value": {
+    "value": 400,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "tarot": {
+    "value": "XXI World",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "symbol": {
+    "value": "Cross / mark",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "attribution": {
+    "value": "Saturn",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   },
+   "treeConnection": {
+    "value": [
+     9,
+     10
+    ],
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 5
+   }
+  }
+ ],
+ "gematria": {
+  "methods": [
+   {
+    "id": "standard",
+    "name": {
+     "value": "Standard gematria",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "description": {
+     "value": "Adds letter values. Final forms ך ם ן ף ץ retain 20, 40, 50, 80, 90 in this method.",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    }
+   },
+   {
+    "id": "final-forms-other",
+    "name": {
+     "value": "Other final-form methods",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "description": {
+     "value": "Some other methods assign different final-form values. Do not mix methods within a comparison.",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    }
+   },
+   {
+    "id": "spelled-name",
+    "name": {
+     "value": "Letter vs spelled letter-name",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "description": {
+     "value": "A letter and its spelled name have different totals (e.g. ז = 7; זין = 7 + 10 + 50 = 67).",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    }
+   },
+   {
+    "id": "digit-reduction",
+    "name": {
+     "value": "Digit reduction",
+     "tradition": "Personal interpretation",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "description": {
+     "value": "A separate operation from summing (1 + 2 + 1 + 2 = 6 differs from 12 + 12 = 24). Record which operation is used; do not change it to obtain a preferred match.",
+     "tradition": "Personal interpretation",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    }
+   },
+   {
+    "id": "clock-time",
+    "name": {
+     "value": "Clock time as numbers",
+     "tradition": "Personal interpretation",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "description": {
+     "value": "Treating a clock time (e.g. 12:12 as two twelves) as gematria is a chosen interpretive method, not a universal rule.",
+     "tradition": "Personal interpretation",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    }
+   }
+  ],
+  "examples": [
+   {
+    "word": {
+     "value": "בינה",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "gloss": {
+     "value": "Binah, understanding",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "value": {
+     "value": 67,
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "method": "standard"
+   },
+   {
+    "word": {
+     "value": "לבנה",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "gloss": {
+     "value": "Levanah, Moon",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "value": {
+     "value": 87,
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "method": "standard"
+   },
+   {
+    "word": {
+     "value": "זין",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "gloss": {
+     "value": "Zayin (spelled name)",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "value": {
+     "value": 67,
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "method": "standard"
+   },
+   {
+    "word": {
+     "value": "חית",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "gloss": {
+     "value": "Cheth (spelled name)",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "value": {
+     "value": 418,
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "method": "standard"
+   },
+   {
+    "word": {
+     "value": "ישוע",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "gloss": {
+     "value": "Yeshua",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "value": {
+     "value": 386,
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "method": "standard"
+   },
+   {
+    "word": {
+     "value": "יהושע",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "gloss": {
+     "value": "Yehoshua",
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "value": {
+     "value": 391,
+     "tradition": "Jewish Kabbalah",
+     "source": [
+      "JAP:zelator-2026-10-27"
+     ],
+     "status": "confirmed-by-owner",
+     "page": 7
+    },
+    "method": "standard"
+   }
+  ],
+  "correction": {
+   "value": "Binah (בינה) = 67, not 391. 391 is the value of Yehoshua (יהושע); do not label 391 as the value of Binah.",
+   "tradition": "Jewish Kabbalah",
+   "source": [
+    "JAP:zelator-2026-10-27"
+   ],
+   "status": "confirmed-by-owner",
+   "page": 7
+  }
+ },
+ "moonMonday": {
+  "day": {
+   "value": "Monday is associated with the Moon in the traditional planetary weekday cycle.",
+   "tradition": "Hermetic Qabalah",
+   "source": [
+    "JAP:zelator-2026-10-27"
+   ],
+   "status": "confirmed-by-owner",
+   "page": 8,
+   "note": "Traditional planetary weekday cycle (astrological), as used in Hermetic practice."
+  },
+  "weekdaySequence": {
+   "value": [
+    [
+     "sunday",
+     "Sun"
+    ],
+    [
+     "monday",
+     "Moon"
+    ],
+    [
+     "tuesday",
+     "Mars"
+    ],
+    [
+     "wednesday",
+     "Mercury"
+    ],
+    [
+     "thursday",
+     "Jupiter"
+    ],
+    [
+     "friday",
+     "Venus"
+    ],
+    [
+     "saturday",
+     "Saturn"
+    ]
+   ],
+   "tradition": "Hermetic Qabalah",
+   "source": [
+    "JAP:zelator-2026-10-27"
+   ],
+   "status": "confirmed-by-owner",
+   "page": 8
+  },
+  "lunarThemes": {
+   "value": "Receptivity, memory, reflection and changing conditions, used as contemplative symbols; they do not establish how a person must feel or act.",
+   "tradition": "Personal interpretation",
+   "source": [
+    "JAP:zelator-2026-10-27"
+   ],
+   "status": "confirmed-by-owner",
+   "page": 8
+  },
+  "levanahGematria": {
+   "value": 87,
+   "tradition": "Jewish Kabbalah",
+   "source": [
+    "JAP:zelator-2026-10-27"
+   ],
+   "status": "confirmed-by-owner",
+   "page": 7,
+   "word": "לבנה"
+  },
+  "constellationVsSign": {
+   "value": "A constellation map and tropical zodiac signs use different reference systems.",
+   "tradition": "Hermetic Qabalah",
+   "source": [
+    "JAP:zelator-2026-10-27"
+   ],
+   "status": "confirmed-by-owner",
+   "page": 8
+  }
+ },
+ "hehZayinCheth": [
+  {
+   "letter": {
+    "value": "ה",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 6
+   },
+   "name": {
+    "value": "Heh",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 6
+   },
+   "value": {
+    "value": 5,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 6
+   },
+   "path": {
+    "value": 15,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "tarot": {
+    "value": "IV Emperor",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "symbol": {
+    "value": "Window",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "attribution": {
+    "value": "Aries",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "jewishTeaching": {
+    "value": "In Letters of Light, Heh is associated with thought, speech and action, and its opening with return and repentance.",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 6
+   },
+   "tarotVariant": {
+    "value": "Crowley exchanges Heh/Tzaddi attributions.",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   }
+  },
+  {
+   "letter": {
+    "value": "ז",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 6
+   },
+   "name": {
+    "value": "Zayin",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 6
+   },
+   "value": {
+    "value": 7,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 6
+   },
+   "path": {
+    "value": 17,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "tarot": {
+    "value": "VI Lovers",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "symbol": {
+    "value": "Sword",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "attribution": {
+    "value": "Gemini",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "spelledName": {
+    "value": {
+     "word": "זין",
+     "value": 67
+    },
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 6
+   },
+   "arithmeticEquality": {
+    "value": "זין (67) = בינה (Binah, 67): an arithmetic equality using these spellings, not proof of an inevitable event.",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 6
+   }
+  },
+  {
+   "letter": {
+    "value": "ח",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 6
+   },
+   "name": {
+    "value": "Cheth",
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 6
+   },
+   "value": {
+    "value": 8,
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 6
+   },
+   "path": {
+    "value": 18,
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "tarot": {
+    "value": "VII Chariot",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "symbol": {
+    "value": "Fence",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "attribution": {
+    "value": "Cancer",
+    "tradition": "Hermetic Qabalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 4
+   },
+   "spelledName": {
+    "value": {
+     "word": "חית",
+     "value": 418
+    },
+    "tradition": "Jewish Kabbalah",
+    "source": [
+     "JAP:zelator-2026-10-27"
+    ],
+    "status": "confirmed-by-owner",
+    "page": 7
+   }
+  }
+ ],
+ "conflicts": [
+  {
+   "path": 31,
+   "existing": "element fire/spirit (777:I, research-doc:§4)",
+   "thisSource": "Fire",
+   "kind": "partial",
+   "note": "Source gives only Fire; existing data also carries Spirit. Not contradictory; both kept under their own sources."
+  },
+  {
+   "path": 32,
+   "existing": "planet saturn/earth (777:I, research-doc:§4)",
+   "thisSource": "Saturn",
+   "kind": "partial",
+   "note": "Source gives only Saturn; existing data also carries Earth. Not contradictory; both kept under their own sources."
+  }
+ ]
+}
