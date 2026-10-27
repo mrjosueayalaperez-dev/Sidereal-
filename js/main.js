@@ -4,8 +4,9 @@ import { parse, serialize, createStore, SPEEDS } from './state.js';
 import { makeGematria } from './gematria.js';
 import { renderPanel } from './ui/panel.js';
 import { renderTree, highlightTree, pathForPlanet } from './render/tree.js';
+import { decorateRows } from './ui/esoteric.js';
 const J = f => fetch(new URL(`../data/${f}.json`, import.meta.url)).then(r => r.json());
-const [presetsData, { planets }, { letters }, { sephirot }, { paths }, { sources }] = await Promise.all(['presets', 'planets', 'letters', 'sephirot', 'paths', 'sources'].map(J));
+const [presetsData, { planets }, { letters }, { sephirot }, { paths }, { sources }, registry] = await Promise.all(['presets', 'planets', 'letters', 'sephirot', 'paths', 'sources', 'esoteric-registry'].map(J));
 const gem = makeGematria(letters);
 const app = document.getElementById('app');
 app.innerHTML = `<section class="card">
@@ -42,9 +43,10 @@ function render(s) {
   $('tz').value = s.tz; $('when').textContent = s.t.toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
   $('prec').innerHTML = lowPrecision(s.t) ? '<span class="badge">low precision (outside 1800–2200)</span>' : '';
   $('pos').innerHTML = '<tr><th>Body</th><th>Lon°</th><th>AU</th></tr>' + Object.entries(pos).map(([id, p]) => `<tr><td>${id}</td><td>${p.lon.toFixed(2)}</td><td>${p.dist.toFixed(3)}</td></tr>`).join('');
-  renderPanel($('panel'), { planet: planets.find(p => p.id === s.sel), letters, sephirot, gem, version: s.letters, sources });
+  renderPanel($('panel'), { planet: planets.find(p => p.id === s.sel), letters, sephirot, gem, version: s.letters, sources, registry });
   { const pl = planets.find(p => p.id === s.sel); highlightTree($('tree'), pl ? { sephirah: pl.sephirah, path: pathForPlanet(pl, paths, s.letters) } : {}); }
   document.querySelectorAll('[data-planet]').forEach(b => b.setAttribute('aria-pressed', b.dataset.planet === s.sel));
+  decorateRows(document, planets, registry, { system: s.letters, letters });
   history.replaceState(null, '', '?' + serialize(s));
   window.__sidereal = { state: s, positions: pos, hits, rate };
 }
