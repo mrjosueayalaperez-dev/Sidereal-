@@ -11,8 +11,9 @@ import { planetaryHours } from './astro/hours.js';
 import { natalSnapshot, snapshotText } from './astro/natal.js';
 import { renderWheel } from './render/wheel.js';
 import { renderTree, highlightTree, pathForPlanet } from './render/tree.js';
+import { decorateRows } from './ui/esoteric.js';
 const J = f => fetch(new URL(`../data/${f}.json`, import.meta.url)).then(r => r.json());
-const [presetsData, { planets }, { letters }, { sephirot }, { paths }, { sources }, ayanJson] = await Promise.all(['presets', 'planets', 'letters', 'sephirot', 'paths', 'sources', 'ayanamsa'].map(J));
+const [presetsData, { planets }, { letters }, { sephirot }, { paths }, { sources }, ayanJson, registry] = await Promise.all(['presets', 'planets', 'letters', 'sephirot', 'paths', 'sources', 'ayanamsa', 'esoteric-registry'].map(J));
 const ayanData = ayanJson;
 const gem = makeGematria(letters);
 const app = document.getElementById('app');
@@ -79,9 +80,10 @@ function render(s) {
   $('view').value = s.view; const m = moonInfo(s.t);
   $('moon').innerHTML = `☽ ${m.name} — ${(m.illumination * 100).toFixed(1)}% illuminated (phase angle ${m.phase.toFixed(1)}°)`;
   $('pos').innerHTML = `<caption class="muted">${s.view === 'geo' ? 'Geocentric apparent' : 'Heliocentric'} ecliptic longitude (of date)</caption><tr><th>Body</th><th>Lon°</th><th>AU</th><th>Motion</th></tr>` + Object.entries(pos).map(([id, p]) => `<tr data-body="${id}"><td>${id}</td><td>${p.lon.toFixed(2)}</td><td>${p.dist.toFixed(3)}</td><td>${s.view === 'geo' ? (p.retro ? '℞ retrograde' : 'direct') : '—'}</td></tr>`).join('');
-  renderPanel($('panel'), { planet: planets.find(p => p.id === s.sel), letters, sephirot, gem, version: s.letters, sources });
+  renderPanel($('panel'), { planet: planets.find(p => p.id === s.sel), letters, sephirot, gem, version: s.letters, sources, registry });
   { const pl = planets.find(p => p.id === s.sel); highlightTree($('tree'), pl ? { sephirah: pl.sephirah, path: pathForPlanet(pl, paths, s.letters) } : {}); }
   document.querySelectorAll('[data-planet]').forEach(b => b.setAttribute('aria-pressed', b.dataset.planet === s.sel));
+  decorateRows(document, planets, registry, { system: s.letters, letters });
   history.replaceState(null, '', '?' + serialize(s));
   window.__sidereal = { state: s, positions: pos, hits, rate };
 }

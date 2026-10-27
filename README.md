@@ -11,8 +11,25 @@ Gematria values are traditional and educational; they are not predictive.**
 - Licence for this project's own code: **owner decision (Josue) — not yet chosen.** Third-party notices: `vendor/`.
 - Records marked `UNCONFIRMED` in `data/` have not been verified against a primary source and are shown with a badge in the UI.
 
+<<<<<<< HEAD
 ## Features (tickets T1–T13, see draft PRs #1–#13)
 Orrery (helio/geo), time scrubber + presets + URL state, correspondences panel + gematria, Tree of Life, zodiac wheel
 (tropical/sidereal), aspects, PNG export/share/a11y, planetary hours, natal snapshot (signs only).
 Deferred: house systems, optional 3D view. Open UNCONFIRMED items are listed in `data/*.json` (`status: "UNCONFIRMED"`).
 Fixtures: `tests/fixtures/` (JPL Horizons, USNO, published Mercury stations) — regenerate Horizons with `node tools/fetch-horizons.mjs`.
+=======
+## Per-planet esoteric layer (built in)
+Every planet carries its correspondences in `data/planets.json` under `planet.esoteric`, and they always render with the
+planet (info card and every table row naming a planet). There is no on/off toggle. The GD/Gra control only switches
+*which* letter attribution is shown.
+
+Each field is `{ "value": …, "source": ["<key in data/sources.json>"], "status": "confirmed" | "UNCONFIRMED", "note"?: … }`.
+UNCONFIRMED fields keep `value: null` and are shown blank with a badge. Current fields: `hebrewLetter` (with `variants.gra`
+etc.), `nameGematria` (doc §3), `tarot` (UNCONFIRMED, not in the research doc).
+
+**To add a new esoteric element (data only, no code):**
+1. Add `"myField": {"value": …, "source": [...], "status": "confirmed"}` (or `null` + `"UNCONFIRMED"` + `note`) to `esoteric` for **all 7 planets**.
+2. Add `{"key": "myField", "label": "My field", "format": "text"}` to `data/esoteric-registry.json` (`format`: `text` | `number` | `hebrew-letter`;
+   optional `systemAware: true` to pick `variants[<letter system>]`, `detailKey` for a secondary value).
+3. Add any new source keys to `data/sources.json`. Run `node --test tests/`: `tests/esoteric-data.test.js` checks every planet has every registry field.
+>>>>>>> sidereal/t12-planetary-hours
