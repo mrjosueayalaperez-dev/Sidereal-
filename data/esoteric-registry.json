@@ -1,0 +1,22 @@
+{
+ "note": "Esoteric fields rendered with every planet, in this order. To add a field: add planets[].esoteric.<key> = {value, source[], status} to data/planets.json and an entry here. No code change needed.",
+ "fields": [
+  {
+   "key": "hebrewLetter",
+   "label": "Hebrew letter",
+   "format": "hebrew-letter",
+   "systemAware": true
+  },
+  {
+   "key": "nameGematria",
+   "label": "Name gematria",
+   "format": "number",
+   "detailKey": "word"
+  },
+  {
+   "key": "tarot",
+   "label": "Tarot",
+   "format": "text"
+  }
+ ]
+}
