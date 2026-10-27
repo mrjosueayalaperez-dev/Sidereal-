@@ -1,0 +1,10 @@
+{"rateArcsecPerYear":50.29,"rateNote":"Linear approximation per research doc §6.4 (~50.29″/yr). Not a full precession model.",
+ "status":"UNCONFIRMED","note":"Epoch constants are secondary-source transcriptions of Swiss Ephemeris tables; not yet cross-checked against the Swiss Ephemeris docs directly. value is null until confirmed; `candidate` is used for computation and the UI badges every sidereal result.",
+ "systems":[
+  {"id":"lahiri","label":"Lahiri (Chitrapaksha)","t0JD":2415020.0,"t0":"1900 Jan 0.5","value":null,"candidate":22.46047,"status":"UNCONFIRMED","sources":["https://saravali.github.io/astrology/aya_basics.html"],"confidence":"unconfirmed"},
+  {"id":"fagan-bradley","label":"Fagan-Bradley","t0JD":2433282.5,"t0":"1950 Jan 1","value":null,"candidate":24.04204,"status":"UNCONFIRMED","sources":["https://saravali.github.io/astrology/aya_basics.html"],"confidence":"unconfirmed"},
+  {"id":"raman","label":"Raman","t0JD":2415020.0,"t0":"1900 Jan 0.5","value":null,"candidate":21.01444,"status":"UNCONFIRMED","sources":["https://saravali.github.io/astrology/aya_basics.html"],"confidence":"unconfirmed"},
+  {"id":"krishnamurti","label":"Krishnamurti","t0JD":2415020.0,"t0":"1900 Jan 0.5","value":null,"candidate":22.363889,"status":"UNCONFIRMED","sources":["https://saravali.github.io/astrology/aya_basics.html"],"confidence":"unconfirmed"}
+ ],
+ "references":[{"system":"lahiri","date":"2000-01-01","deg":23.853055,"dms":"23°51'11\"","source":"https://www.astro.com/astrowiki/en/Ayanamsha (citing New International Ephemeris 1900-2050)"},
+  {"system":"lahiri","date":"2000-01-01T12:00 TT","deg":23.857092,"dms":"23°51'25.53\"","source":"https://github.com/g-battaglia/libephemeris/blob/main/docs/reference/ayanamsha.md (Indian Astronomical Ephemeris)","note":"conflicts with astro.com by 14.5″ — UNCONFIRMED which is canonical"}]}
