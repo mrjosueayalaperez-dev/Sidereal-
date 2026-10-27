@@ -6,6 +6,7 @@ import { renderPanel } from './ui/panel.js';
 import { isRetro } from './astro/retro.js';
 import { moonInfo } from './astro/moon.js';
 import { ayanamsa, fmt } from './astro/zodiac.js';
+import { aspects, DEFAULT_ORBS } from './astro/aspects.js';
 import { renderWheel } from './render/wheel.js';
 import { renderTree, highlightTree, pathForPlanet } from './render/tree.js';
 const J = f => fetch(new URL(`../data/${f}.json`, import.meta.url)).then(r => r.json());
@@ -30,7 +31,9 @@ app.innerHTML = `<section class="card">
  <h2>Zodiac wheel (geocentric)</h2>
  <div class="row"><select id="zodiac" aria-label="Zodiac"><option value="tropical">Tropical</option><option value="sidereal">Sidereal</option></select>
   <select id="ayan" aria-label="Ayanamsa">${ayanData.systems.map(a => `<option value="${a.id}">${a.label}</option>`).join('')}</select><span id="ayanOut"></span></div>
- <div id="wheel" style="max-width:520px"></div><table id="signs"></table></section>
+ <div id="wheel" style="max-width:520px"></div><table id="signs"></table>
+ <h2>Aspects</h2><div class="row" id="orbs">${Object.entries(DEFAULT_ORBS).map(([k, v]) => `<label>${k} orb <input type="number" min="0" max="15" step="0.5" value="${v}" data-orb="${k}" style="width:4em"></label>`).join('')}</div>
+ <table id="aspects"></table></section>
 <section class="card" id="side"><div class="row" role="group" aria-label="Select planet">${planets.map(p => `<button data-planet="${p.id}" aria-label="${p.id}">${p.symbol}</button>`).join('')}</div>
  <div id="panel"></div>
  <h2>Tree of Life</h2><p class="muted" style="font-size:12px">Dashed paths (?) = endpoints UNCONFIRMED. Path letters per GD/777.</p><div id="tree"></div><p id="pathInfo" class="muted" aria-live="polite"></p><h2 id="when"></h2><p id="moon"></p><table id="pos"></table></section>`;
@@ -58,7 +61,10 @@ function render(s) {
     $('ayanOut').innerHTML = ay ? `ayanamsa ${ay.deg.toFixed(4)}° <span class="badge" title="${ayanData.note}">UNCONFIRMED constants</span>` : '';
     renderWheel($('wheel'), shown, { glyphs: GLYPH, label: `${s.zodiac} zodiac wheel` });
     $('signs').innerHTML = `<caption class="muted">${s.zodiac} positions${ay ? ' (sidereal results use UNCONFIRMED ayanamsa constants)' : ''}</caption>` + Object.entries(shown).map(([k, v]) => `<tr data-sign="${k}"><td>${GLYPH[k]} ${k}</td><td>${fmt(v.lon)}${v.retro ? ' ℞' : ''}</td></tr>`).join('');
-    window.__wheel = shown; }
+    const orbs = Object.fromEntries([...document.querySelectorAll('[data-orb]')].map(i => [i.dataset.orb, +i.value]));
+    const asp = aspects(Object.fromEntries(Object.entries(g).map(([k, v]) => [k, v.lon])), orbs);
+    $('aspects').innerHTML = '<tr><th>Pair</th><th>Aspect</th><th>Orb</th></tr>' + (asp.map(x => `<tr data-aspect="${x.a}-${x.b}"><td>${GLYPH[x.a]} ${x.a} – ${GLYPH[x.b]} ${x.b}</td><td>${x.glyph} ${x.type}</td><td>${x.orb.toFixed(2)}°</td></tr>`).join('') || '<tr><td colspan="3">none</td></tr>');
+    window.__wheel = shown; window.__aspects = asp; }
   $('view').value = s.view; const m = moonInfo(s.t);
   $('moon').innerHTML = `☽ ${m.name} — ${(m.illumination * 100).toFixed(1)}% illuminated (phase angle ${m.phase.toFixed(1)}°)`;
   $('pos').innerHTML = `<caption class="muted">${s.view === 'geo' ? 'Geocentric apparent' : 'Heliocentric'} ecliptic longitude (of date)</caption><tr><th>Body</th><th>Lon°</th><th>AU</th><th>Motion</th></tr>` + Object.entries(pos).map(([id, p]) => `<tr data-body="${id}"><td>${id}</td><td>${p.lon.toFixed(2)}</td><td>${p.dist.toFixed(3)}</td><td>${s.view === 'geo' ? (p.retro ? '℞ retrograde' : 'direct') : '—'}</td></tr>`).join('');
@@ -71,6 +77,7 @@ function render(s) {
 renderTree($('tree'), { sephirot, paths, onPath: p => { $('pathInfo').textContent = `Path ${p.n} ${p.letter}: ${p.attribution.type} ${p.attribution.id}${p.status ? ' — UNCONFIRMED endpoints: ' + p.note : ''}`; } });
 store.sub(render);
 $('dt').addEventListener('change', e => { const t = fromInput(e.target.value, store.get().tz); if (!isNaN(t)) store.set({ t }); });
+$('orbs').addEventListener('change', () => render(store.get()));
 $('zodiac').addEventListener('change', e => store.set({ zodiac: e.target.value }));
 $('ayan').addEventListener('change', e => store.set({ ayan: e.target.value }));
 $('view').addEventListener('change', e => store.set({ view: e.target.value }));
