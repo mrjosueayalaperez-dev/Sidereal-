@@ -1,0 +1,2 @@
+{"sources":["https://www.celestialdb.com/mercury-retrograde","https://tutelox.com/retrogrades/mercury-2026"],"note":"UTC station times as published (retrieved 2026-10-26); CelestialDB and Tutelox agree within ~3 min.",
+ "stations":[{"type":"retrograde","utc":"2026-02-26T06:47Z"},{"type":"direct","utc":"2026-03-20T19:36Z"},{"type":"retrograde","utc":"2026-06-29T17:37Z"},{"type":"direct","utc":"2026-07-23T22:54Z"},{"type":"retrograde","utc":"2026-10-24T07:11Z"},{"type":"direct","utc":"2026-11-13T15:55Z"}]}

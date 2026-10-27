@@ -3,6 +3,8 @@ import { drawOrrery, PLANETS } from './render/orrery.js';
 import { parse, serialize, createStore, SPEEDS } from './state.js';
 import { makeGematria } from './gematria.js';
 import { renderPanel } from './ui/panel.js';
+import { isRetro } from './astro/retro.js';
+import { moonInfo } from './astro/moon.js';
 import { renderTree, highlightTree, pathForPlanet } from './render/tree.js';
 import { decorateRows } from './ui/esoteric.js';
 const J = f => fetch(new URL(`../data/${f}.json`, import.meta.url)).then(r => r.json());
@@ -16,6 +18,7 @@ app.innerHTML = `<section class="card">
   <button id="now">Now</button>
   <button id="rew" aria-label="Rewind">◀◀</button><button id="play" aria-label="Play">▶</button>
   <select id="speed" aria-label="Speed per second">${Object.keys(SPEEDS).map(k => `<option value="${k}" ${k === '1d' ? 'selected' : ''}>${k}/s</option>`).join('')}</select>
+  <select id="view" aria-label="Centre"><option value="helio">Heliocentric</option><option value="geo">Geocentric</option></select>
   <span id="prec"></span>
  </div>
  <div class="row" id="presetRow"><label>Preset <select id="preset"><option value="">—</option>${presetsData.presets.map(p => `<option value="${p.id}">${p.label} (${p.date})</option>`).join('')}</select></label>
@@ -24,7 +27,7 @@ app.innerHTML = `<section class="card">
  <canvas id="orrery" width="800" height="800" aria-label="Orrery"></canvas></section>
 <section class="card" id="side"><div class="row" role="group" aria-label="Select planet">${planets.map(p => `<button data-planet="${p.id}" aria-label="${p.id}">${p.symbol}</button>`).join('')}</div>
  <div id="panel"></div>
- <h2>Tree of Life</h2><p class="muted" style="font-size:12px">Dashed paths (?) = endpoints UNCONFIRMED. Path letters per GD/777.</p><div id="tree"></div><p id="pathInfo" class="muted" aria-live="polite"></p><h2 id="when"></h2><table id="pos"></table></section>`;
+ <h2>Tree of Life</h2><p class="muted" style="font-size:12px">Dashed paths (?) = endpoints UNCONFIRMED. Path letters per GD/777.</p><div id="tree"></div><p id="pathInfo" class="muted" aria-live="polite"></p><h2 id="when"></h2><p id="moon"></p><table id="pos"></table></section>`;
 const $ = id => document.getElementById(id);
 const init = parse(location.search); if (!init.t) init.t = new Date();
 const store = createStore(init); let rate = 0, last = 0, hits = [];
@@ -33,7 +36,7 @@ function toInput(t, tz) { const d = tz === 'utc' ? [t.getUTCFullYear(), t.getUTC
   return `${String(d[0]).padStart(4, '0')}-${pad(d[1] + 1)}-${pad(d[2])}T${pad(d[3])}:${pad(d[4])}`; }
 function fromInput(v, tz) { return tz === 'utc' ? new Date(v + ':00Z') : new Date(v); }
 export function positionsAt(t, view) {
-  if (view === 'geo') return Object.fromEntries(['sun', 'moon', 'mercury', 'venus', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'].map(id => [id, geo(id, t)]));
+  if (view === 'geo') return Object.fromEntries(['sun', 'moon', 'mercury', 'venus', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'].map(id => [id, { ...geo(id, t), retro: isRetro(id, t) }]));
   return Object.fromEntries(PLANETS.map(id => [id, helio(id, t)]));
 }
 function render(s) {
@@ -42,7 +45,9 @@ function render(s) {
   if (document.activeElement !== $('dt')) $('dt').value = toInput(s.t, s.tz);
   $('tz').value = s.tz; $('when').textContent = s.t.toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
   $('prec').innerHTML = lowPrecision(s.t) ? '<span class="badge">low precision (outside 1800–2200)</span>' : '';
-  $('pos').innerHTML = '<tr><th>Body</th><th>Lon°</th><th>AU</th></tr>' + Object.entries(pos).map(([id, p]) => `<tr><td>${id}</td><td>${p.lon.toFixed(2)}</td><td>${p.dist.toFixed(3)}</td></tr>`).join('');
+  $('view').value = s.view; const m = moonInfo(s.t);
+  $('moon').innerHTML = `☽ ${m.name} — ${(m.illumination * 100).toFixed(1)}% illuminated (phase angle ${m.phase.toFixed(1)}°)`;
+  $('pos').innerHTML = `<caption class="muted">${s.view === 'geo' ? 'Geocentric apparent' : 'Heliocentric'} ecliptic longitude (of date)</caption><tr><th>Body</th><th>Lon°</th><th>AU</th><th>Motion</th></tr>` + Object.entries(pos).map(([id, p]) => `<tr data-body="${id}"><td>${id}</td><td>${p.lon.toFixed(2)}</td><td>${p.dist.toFixed(3)}</td><td>${s.view === 'geo' ? (p.retro ? '℞ retrograde' : 'direct') : '—'}</td></tr>`).join('');
   renderPanel($('panel'), { planet: planets.find(p => p.id === s.sel), letters, sephirot, gem, version: s.letters, sources, registry });
   { const pl = planets.find(p => p.id === s.sel); highlightTree($('tree'), pl ? { sephirah: pl.sephirah, path: pathForPlanet(pl, paths, s.letters) } : {}); }
   document.querySelectorAll('[data-planet]').forEach(b => b.setAttribute('aria-pressed', b.dataset.planet === s.sel));
@@ -53,6 +58,7 @@ function render(s) {
 renderTree($('tree'), { sephirot, paths, onPath: p => { $('pathInfo').textContent = `Path ${p.n} ${p.letter}: ${p.attribution.type} ${p.attribution.id}${p.status ? ' — UNCONFIRMED endpoints: ' + p.note : ''}`; } });
 store.sub(render);
 $('dt').addEventListener('change', e => { const t = fromInput(e.target.value, store.get().tz); if (!isNaN(t)) store.set({ t }); });
+$('view').addEventListener('change', e => store.set({ view: e.target.value }));
 $('tz').addEventListener('change', e => store.set({ tz: e.target.value }));
 $('now').onclick = () => { rate = 0; store.set({ t: new Date() }); syncPlay(); };
 const speed = () => SPEEDS[$('speed').value];
