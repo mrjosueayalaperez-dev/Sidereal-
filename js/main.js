@@ -12,8 +12,9 @@ import { natalSnapshot, snapshotText } from './astro/natal.js';
 import { renderWheel } from './render/wheel.js';
 import { renderTree, highlightTree, pathForPlanet } from './render/tree.js';
 import { decorateRows } from './ui/esoteric.js';
+import { renderZelator } from './ui/zelator.js';
 const J = f => fetch(new URL(`../data/${f}.json`, import.meta.url)).then(r => r.json());
-const [presetsData, { planets }, { letters }, { sephirot }, { paths }, { sources }, ayanJson, registry] = await Promise.all(['presets', 'planets', 'letters', 'sephirot', 'paths', 'sources', 'ayanamsa', 'esoteric-registry'].map(J));
+const [presetsData, { planets }, { letters }, { sephirot }, { paths }, { sources }, ayanJson, registry, zelator] = await Promise.all(['presets', 'planets', 'letters', 'sephirot', 'paths', 'sources', 'ayanamsa', 'esoteric-registry', 'zelator'].map(J));
 const ayanData = ayanJson;
 const gem = makeGematria(letters);
 const app = document.getElementById('app');
@@ -47,7 +48,8 @@ app.innerHTML = `<section class="card">
  <div id="panel"></div>
  <h2>Planetary hours</h2><div class="row"><label>Lat <input id="lat" type="number" step="0.0001" min="-90" max="90" style="width:7em"></label><label>Lon <input id="lon" type="number" step="0.0001" min="-180" max="180" style="width:7em"></label>
   <button id="geoloc">Use my location</button></div><p class="muted" style="font-size:12px">Location is used only in this browser and is not put in the share URL. Traditional/educational.</p><div id="hours"></div>
- <h2>Tree of Life</h2><p class="muted" style="font-size:12px">Dashed paths (?) = endpoints UNCONFIRMED. Path letters per GD/777.</p><div id="tree"></div><p id="pathInfo" class="muted" aria-live="polite"></p><h2 id="when"></h2><p id="moon"></p><table id="pos"></table></section>`;
+ <h2>Tree of Life</h2><p class="muted" style="font-size:12px">Dashed paths (?) = endpoints UNCONFIRMED. Path letters per GD/777; endpoints of 15/16/20/24/25 confirmed by owner source JAP:zelator-2026-10-27.</p><div id="tree"></div><p id="pathInfo" class="muted" aria-live="polite"></p><h2 id="when"></h2><p id="moon"></p><table id="pos"></table></section>
+<section class="card" id="zelator"></section>`;
 const $ = id => document.getElementById(id);
 const init = parse(location.search); if (!init.t) init.t = new Date();
 const store = createStore(init); let rate = 0, last = 0, hits = [];
@@ -87,7 +89,8 @@ function render(s) {
   history.replaceState(null, '', '?' + serialize(s));
   window.__sidereal = { state: s, positions: pos, hits, rate };
 }
-renderTree($('tree'), { sephirot, paths, onPath: p => { $('pathInfo').textContent = `Path ${p.n} ${p.letter}: ${p.attribution.type} ${p.attribution.id}${p.status ? ' — UNCONFIRMED endpoints: ' + p.note : ''}`; } });
+$('zelator').innerHTML = renderZelator(zelator, sources);
+renderTree($('tree'), { sephirot, paths, onPath: p => { const z = zelator.paths.find(q => q.n.value === p.n); $('pathInfo').textContent = `Path ${p.n} ${p.letter}: ${p.attribution.type} ${p.attribution.id}${z ? ` · ${z.tarot.value} (${z.tarot.tradition})` : ''}${p.status ? ' — UNCONFIRMED endpoints: ' + p.note : ''}`; } });
 let liveTimer; store.sub(s => { clearTimeout(liveTimer); liveTimer = setTimeout(() => { const p = window.__sidereal.positions;
   $('live').textContent = `${s.t.toISOString().slice(0, 16).replace('T', ' ')} UTC. ` + Object.entries(p).map(([k, v]) => `${k} ${v.lon.toFixed(0)} degrees${v.retro ? ' retrograde' : ''}`).join(', '); }, rate ? 1500 : 300); });
 store.sub(render);

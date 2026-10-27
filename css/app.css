@@ -19,3 +19,7 @@ a{color:var(--gold)}
 section.card{min-width:0;overflow-wrap:anywhere}select,input,button{max-width:100%}.row label{min-width:0}#preset{width:100%;max-width:420px}table{table-layout:auto}
 @media (max-width:480px){#presetRow label{display:flex;flex-direction:column}}
 .heb{font-size:20px}.esoteric th{width:45%}.eso{font-size:12px;color:var(--muted)}
+#zelator{grid-column:1/-1}.zgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:12px}
+.trad{display:inline-block;font-size:10px;padding:0 4px;border-radius:3px;border:1px solid var(--gold-dim);color:var(--muted);margin-left:3px;white-space:nowrap}
+.trad-jk{border-color:#6a8fd4;color:#9fb8e8}.trad-hq{border-color:var(--gold);color:var(--gold)}.trad-pi{border-color:#a07ad4;color:#c4a8ec}
+#zelator .esoteric th{width:auto}

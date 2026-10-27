@@ -19,8 +19,9 @@ test('letters: 22, values & classes', () => {
   assert.equal(letters.at(-1).standard, 400); assert.deepEqual(letters.filter(l => l.final).map(l => l.final.gadol), [500, 600, 700, 800, 900]);
 });
 test('sephirot: 10 numbered + optional Daath', () => { assert.equal(sephirot.filter(s => s.n).length, 10); assert.ok(sephirot.find(s => s.id === 'daath').optional); });
-test('paths: 22 (11-32); 15/16/20/24/25 endpoints UNCONFIRMED', () => {
+test('paths: 22 (11-32); 15/16/20/24/25 endpoints resolved by owner source JAP:zelator-2026-10-27', () => {
   assert.deepEqual(paths.map(p => p.n), Array.from({ length: 22 }, (_, i) => i + 11));
-  for (const p of paths) if ([15, 16, 20, 24, 25].includes(p.n)) { assert.equal(p.from, null); assert.equal(p.status, 'UNCONFIRMED'); assert.ok(p.draft); } else { assert.ok(p.from >= 1 && p.to <= 10); }
+  for (const p of paths) { assert.ok(p.from >= 1 && p.to <= 10, `path ${p.n}`); assert.equal(p.status, undefined); assert.equal(p.draft, undefined); }
+  for (const p of paths.filter(p => [15, 16, 20, 24, 25].includes(p.n))) { assert.ok(p.sources.includes('JAP:zelator-2026-10-27')); assert.deepEqual(p.endpoints.value, [p.from, p.to]); assert.equal(p.endpoints.status, 'confirmed-by-owner'); }
 });
 test('presets: unlinked figures UNCONFIRMED', () => { for (const p of presets) if (p.kind === 'market' && !p.sources[0].startsWith('http')) { assert.equal(p.status, 'UNCONFIRMED'); assert.equal(p.figure, null); } });
