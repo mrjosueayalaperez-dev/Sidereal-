@@ -3,6 +3,7 @@ import { drawOrrery, PLANETS } from './render/orrery.js';
 import { parse, serialize, createStore, SPEEDS } from './state.js';
 import { makeGematria } from './gematria.js';
 import { renderPanel } from './ui/panel.js';
+import { renderTree, highlightTree, pathForPlanet } from './render/tree.js';
 const J = f => fetch(new URL(`../data/${f}.json`, import.meta.url)).then(r => r.json());
 const [presetsData, { planets }, { letters }, { sephirot }, { paths }, { sources }] = await Promise.all(['presets', 'planets', 'letters', 'sephirot', 'paths', 'sources'].map(J));
 const gem = makeGematria(letters);
@@ -21,7 +22,8 @@ app.innerHTML = `<section class="card">
  <p class="disclaimer" id="presetDisclaimer" role="note">${presetsData.disclaimer}</p>
  <canvas id="orrery" width="800" height="800" aria-label="Orrery"></canvas></section>
 <section class="card" id="side"><div class="row" role="group" aria-label="Select planet">${planets.map(p => `<button data-planet="${p.id}" aria-label="${p.id}">${p.symbol}</button>`).join('')}</div>
- <div id="panel"></div><h2 id="when"></h2><table id="pos"></table></section>`;
+ <div id="panel"></div>
+ <h2>Tree of Life</h2><p class="muted" style="font-size:12px">Dashed paths (?) = endpoints UNCONFIRMED. Path letters per GD/777.</p><div id="tree"></div><p id="pathInfo" class="muted" aria-live="polite"></p><h2 id="when"></h2><table id="pos"></table></section>`;
 const $ = id => document.getElementById(id);
 const init = parse(location.search); if (!init.t) init.t = new Date();
 const store = createStore(init); let rate = 0, last = 0, hits = [];
@@ -41,10 +43,12 @@ function render(s) {
   $('prec').innerHTML = lowPrecision(s.t) ? '<span class="badge">low precision (outside 1800–2200)</span>' : '';
   $('pos').innerHTML = '<tr><th>Body</th><th>Lon°</th><th>AU</th></tr>' + Object.entries(pos).map(([id, p]) => `<tr><td>${id}</td><td>${p.lon.toFixed(2)}</td><td>${p.dist.toFixed(3)}</td></tr>`).join('');
   renderPanel($('panel'), { planet: planets.find(p => p.id === s.sel), letters, sephirot, gem, version: s.letters, sources });
+  { const pl = planets.find(p => p.id === s.sel); highlightTree($('tree'), pl ? { sephirah: pl.sephirah, path: pathForPlanet(pl, paths, s.letters) } : {}); }
   document.querySelectorAll('[data-planet]').forEach(b => b.setAttribute('aria-pressed', b.dataset.planet === s.sel));
   history.replaceState(null, '', '?' + serialize(s));
   window.__sidereal = { state: s, positions: pos, hits, rate };
 }
+renderTree($('tree'), { sephirot, paths, onPath: p => { $('pathInfo').textContent = `Path ${p.n} ${p.letter}: ${p.attribution.type} ${p.attribution.id}${p.status ? ' — UNCONFIRMED endpoints: ' + p.note : ''}`; } });
 store.sub(render);
 $('dt').addEventListener('change', e => { const t = fromInput(e.target.value, store.get().tz); if (!isNaN(t)) store.set({ t }); });
 $('tz').addEventListener('change', e => store.set({ tz: e.target.value }));
