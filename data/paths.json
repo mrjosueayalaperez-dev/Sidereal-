@@ -1,0 +1,398 @@
+{
+ "paths": [
+  {
+   "n": 11,
+   "letter": "א",
+   "from": 1,
+   "to": 2,
+   "attribution": {
+    "type": "element",
+    "id": "air"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 12,
+   "letter": "ב",
+   "from": 1,
+   "to": 3,
+   "attribution": {
+    "type": "planet",
+    "id": "mercury"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 13,
+   "letter": "ג",
+   "from": 1,
+   "to": 6,
+   "attribution": {
+    "type": "planet",
+    "id": "moon"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 14,
+   "letter": "ד",
+   "from": 2,
+   "to": 3,
+   "attribution": {
+    "type": "planet",
+    "id": "venus"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 15,
+   "letter": "ה",
+   "from": null,
+   "to": null,
+   "attribution": {
+    "type": "sign",
+    "id": "aries"
+   },
+   "variants": [
+    {
+     "system": "thoth",
+     "letter": "צ",
+     "note": "Crowley Book of Thoth swaps ה/צ (Emperor/Star)"
+    }
+   ],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "unconfirmed",
+   "draft": {
+    "from": 2,
+    "to": 6
+   },
+   "status": "UNCONFIRMED",
+   "note": "Connecting sephirot not verified against the 777 diagram; sources differ. Rendered dashed from research-doc draft."
+  },
+  {
+   "n": 16,
+   "letter": "ו",
+   "from": null,
+   "to": null,
+   "attribution": {
+    "type": "sign",
+    "id": "taurus"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "unconfirmed",
+   "draft": {
+    "from": 2,
+    "to": 4
+   },
+   "status": "UNCONFIRMED",
+   "note": "Connecting sephirot not verified against the 777 diagram; sources differ. Rendered dashed from research-doc draft."
+  },
+  {
+   "n": 17,
+   "letter": "ז",
+   "from": 3,
+   "to": 6,
+   "attribution": {
+    "type": "sign",
+    "id": "gemini"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 18,
+   "letter": "ח",
+   "from": 3,
+   "to": 5,
+   "attribution": {
+    "type": "sign",
+    "id": "cancer"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 19,
+   "letter": "ט",
+   "from": 4,
+   "to": 5,
+   "attribution": {
+    "type": "sign",
+    "id": "leo"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 20,
+   "letter": "י",
+   "from": null,
+   "to": null,
+   "attribution": {
+    "type": "sign",
+    "id": "virgo"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "unconfirmed",
+   "draft": {
+    "from": 4,
+    "to": 6
+   },
+   "status": "UNCONFIRMED",
+   "note": "Connecting sephirot not verified against the 777 diagram; sources differ. Rendered dashed from research-doc draft."
+  },
+  {
+   "n": 21,
+   "letter": "כ",
+   "from": 4,
+   "to": 7,
+   "attribution": {
+    "type": "planet",
+    "id": "jupiter"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 22,
+   "letter": "ל",
+   "from": 5,
+   "to": 6,
+   "attribution": {
+    "type": "sign",
+    "id": "libra"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 23,
+   "letter": "מ",
+   "from": 5,
+   "to": 8,
+   "attribution": {
+    "type": "element",
+    "id": "water"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 24,
+   "letter": "נ",
+   "from": null,
+   "to": null,
+   "attribution": {
+    "type": "sign",
+    "id": "scorpio"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "unconfirmed",
+   "draft": {
+    "from": 6,
+    "to": 7
+   },
+   "status": "UNCONFIRMED",
+   "note": "Connecting sephirot not verified against the 777 diagram; sources differ. Rendered dashed from research-doc draft."
+  },
+  {
+   "n": 25,
+   "letter": "ס",
+   "from": null,
+   "to": null,
+   "attribution": {
+    "type": "sign",
+    "id": "sagittarius"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "unconfirmed",
+   "draft": {
+    "from": 6,
+    "to": 9
+   },
+   "status": "UNCONFIRMED",
+   "note": "Connecting sephirot not verified against the 777 diagram; sources differ. Rendered dashed from research-doc draft."
+  },
+  {
+   "n": 26,
+   "letter": "ע",
+   "from": 6,
+   "to": 8,
+   "attribution": {
+    "type": "sign",
+    "id": "capricorn"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 27,
+   "letter": "פ",
+   "from": 7,
+   "to": 8,
+   "attribution": {
+    "type": "planet",
+    "id": "mars"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 28,
+   "letter": "צ",
+   "from": 7,
+   "to": 9,
+   "attribution": {
+    "type": "sign",
+    "id": "aquarius"
+   },
+   "variants": [
+    {
+     "system": "thoth",
+     "letter": "ה",
+     "note": "Crowley Book of Thoth swaps ה/צ (Emperor/Star)"
+    }
+   ],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 29,
+   "letter": "ק",
+   "from": 7,
+   "to": 10,
+   "attribution": {
+    "type": "sign",
+    "id": "pisces"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 30,
+   "letter": "ר",
+   "from": 8,
+   "to": 9,
+   "attribution": {
+    "type": "planet",
+    "id": "sun"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 31,
+   "letter": "ש",
+   "from": 8,
+   "to": 10,
+   "attribution": {
+    "type": "element",
+    "id": "fire/spirit"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 32,
+   "letter": "ת",
+   "from": 9,
+   "to": 10,
+   "attribution": {
+    "type": "planet",
+    "id": "saturn/earth"
+   },
+   "variants": [],
+   "sources": [
+    "777:I",
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed"
+  }
+ ]
+}

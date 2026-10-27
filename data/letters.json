@@ -1,0 +1,337 @@
+{
+ "letters": [
+  {
+   "char": "א",
+   "name": "Aleph",
+   "standard": 1,
+   "gadol": 1,
+   "ordinal": 1,
+   "class": "mother",
+   "final": null,
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "ב",
+   "name": "Beth",
+   "standard": 2,
+   "gadol": 2,
+   "ordinal": 2,
+   "class": "double",
+   "final": null,
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "ג",
+   "name": "Gimel",
+   "standard": 3,
+   "gadol": 3,
+   "ordinal": 3,
+   "class": "double",
+   "final": null,
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "ד",
+   "name": "Daleth",
+   "standard": 4,
+   "gadol": 4,
+   "ordinal": 4,
+   "class": "double",
+   "final": null,
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "ה",
+   "name": "Heh",
+   "standard": 5,
+   "gadol": 5,
+   "ordinal": 5,
+   "class": "simple",
+   "final": null,
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "ו",
+   "name": "Vav",
+   "standard": 6,
+   "gadol": 6,
+   "ordinal": 6,
+   "class": "simple",
+   "final": null,
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "ז",
+   "name": "Zayin",
+   "standard": 7,
+   "gadol": 7,
+   "ordinal": 7,
+   "class": "simple",
+   "final": null,
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "ח",
+   "name": "Cheth",
+   "standard": 8,
+   "gadol": 8,
+   "ordinal": 8,
+   "class": "simple",
+   "final": null,
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "ט",
+   "name": "Teth",
+   "standard": 9,
+   "gadol": 9,
+   "ordinal": 9,
+   "class": "simple",
+   "final": null,
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "י",
+   "name": "Yod",
+   "standard": 10,
+   "gadol": 10,
+   "ordinal": 10,
+   "class": "simple",
+   "final": null,
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "כ",
+   "name": "Kaph",
+   "standard": 20,
+   "gadol": 20,
+   "ordinal": 11,
+   "class": "double",
+   "final": {
+    "char": "ך",
+    "standard": 20,
+    "gadol": 500,
+    "ordinal": 11
+   },
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "ל",
+   "name": "Lamed",
+   "standard": 30,
+   "gadol": 30,
+   "ordinal": 12,
+   "class": "simple",
+   "final": null,
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "מ",
+   "name": "Mem",
+   "standard": 40,
+   "gadol": 40,
+   "ordinal": 13,
+   "class": "mother",
+   "final": {
+    "char": "ם",
+    "standard": 40,
+    "gadol": 600,
+    "ordinal": 13
+   },
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "נ",
+   "name": "Nun",
+   "standard": 50,
+   "gadol": 50,
+   "ordinal": 14,
+   "class": "simple",
+   "final": {
+    "char": "ן",
+    "standard": 50,
+    "gadol": 700,
+    "ordinal": 14
+   },
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "ס",
+   "name": "Samekh",
+   "standard": 60,
+   "gadol": 60,
+   "ordinal": 15,
+   "class": "simple",
+   "final": null,
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "ע",
+   "name": "Ayin",
+   "standard": 70,
+   "gadol": 70,
+   "ordinal": 16,
+   "class": "simple",
+   "final": null,
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "פ",
+   "name": "Peh",
+   "standard": 80,
+   "gadol": 80,
+   "ordinal": 17,
+   "class": "double",
+   "final": {
+    "char": "ף",
+    "standard": 80,
+    "gadol": 800,
+    "ordinal": 17
+   },
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "צ",
+   "name": "Tzaddi",
+   "standard": 90,
+   "gadol": 90,
+   "ordinal": 18,
+   "class": "simple",
+   "final": {
+    "char": "ץ",
+    "standard": 90,
+    "gadol": 900,
+    "ordinal": 18
+   },
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "ק",
+   "name": "Qoph",
+   "standard": 100,
+   "gadol": 100,
+   "ordinal": 19,
+   "class": "simple",
+   "final": null,
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "ר",
+   "name": "Resh",
+   "standard": 200,
+   "gadol": 200,
+   "ordinal": 20,
+   "class": "double",
+   "final": null,
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "ש",
+   "name": "Shin",
+   "standard": 300,
+   "gadol": 300,
+   "ordinal": 21,
+   "class": "mother",
+   "final": null,
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "char": "ת",
+   "name": "Tav",
+   "standard": 400,
+   "gadol": 400,
+   "ordinal": 22,
+   "class": "double",
+   "final": null,
+   "sources": [
+    "research-doc:§3",
+    "Westcott1887"
+   ],
+   "confidence": "confirmed"
+  }
+ ]
+}

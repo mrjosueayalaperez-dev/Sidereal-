@@ -1,0 +1,182 @@
+{
+ "sephirot": [
+  {
+   "n": 1,
+   "name": "Kether",
+   "hebrew": "כתר",
+   "planet": null,
+   "attribution": "Primum Mobile",
+   "pos": {
+    "x": 0.5,
+    "y": 0.05
+   },
+   "sources": [
+    "777:I-II",
+    "Regardie"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 2,
+   "name": "Chokmah",
+   "hebrew": "חכמה",
+   "planet": null,
+   "attribution": "Zodiac / fixed stars",
+   "pos": {
+    "x": 0.85,
+    "y": 0.18
+   },
+   "sources": [
+    "777:I-II",
+    "Regardie"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 3,
+   "name": "Binah",
+   "hebrew": "בינה",
+   "planet": "saturn",
+   "attribution": null,
+   "pos": {
+    "x": 0.15,
+    "y": 0.18
+   },
+   "sources": [
+    "777:I-II",
+    "Regardie"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 4,
+   "name": "Chesed",
+   "hebrew": "חסד",
+   "planet": "jupiter",
+   "attribution": null,
+   "pos": {
+    "x": 0.85,
+    "y": 0.4
+   },
+   "sources": [
+    "777:I-II",
+    "Regardie"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 5,
+   "name": "Geburah",
+   "hebrew": "גבורה",
+   "planet": "mars",
+   "attribution": null,
+   "pos": {
+    "x": 0.15,
+    "y": 0.4
+   },
+   "sources": [
+    "777:I-II",
+    "Regardie"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 6,
+   "name": "Tiphareth",
+   "hebrew": "תפארת",
+   "planet": "sun",
+   "attribution": null,
+   "pos": {
+    "x": 0.5,
+    "y": 0.55
+   },
+   "sources": [
+    "777:I-II",
+    "Regardie"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 7,
+   "name": "Netzach",
+   "hebrew": "נצח",
+   "planet": "venus",
+   "attribution": null,
+   "pos": {
+    "x": 0.85,
+    "y": 0.7
+   },
+   "sources": [
+    "777:I-II",
+    "Regardie"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 8,
+   "name": "Hod",
+   "hebrew": "הוד",
+   "planet": "mercury",
+   "attribution": null,
+   "pos": {
+    "x": 0.15,
+    "y": 0.7
+   },
+   "sources": [
+    "777:I-II",
+    "Regardie"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 9,
+   "name": "Yesod",
+   "hebrew": "יסוד",
+   "planet": "moon",
+   "attribution": null,
+   "pos": {
+    "x": 0.5,
+    "y": 0.83
+   },
+   "sources": [
+    "777:I-II",
+    "Regardie"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": 10,
+   "name": "Malkuth",
+   "hebrew": "מלכות",
+   "planet": null,
+   "attribution": "Earth / the elements",
+   "pos": {
+    "x": 0.5,
+    "y": 0.97
+   },
+   "sources": [
+    "777:I-II",
+    "Regardie"
+   ],
+   "confidence": "confirmed"
+  },
+  {
+   "n": null,
+   "id": "daath",
+   "name": "Daath",
+   "hebrew": "דעת",
+   "planet": null,
+   "attribution": null,
+   "optional": true,
+   "pos": {
+    "x": 0.5,
+    "y": 0.29
+   },
+   "sources": [
+    "research-doc:§4"
+   ],
+   "confidence": "confirmed",
+   "note": "not numbered; shown optionally"
+  }
+ ]
+}

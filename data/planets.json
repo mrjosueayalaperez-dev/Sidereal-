@@ -1,0 +1,917 @@
+{
+ "planets": [
+  {
+   "id": "saturn",
+   "symbol": "♄",
+   "hebrewName": "שבתאי",
+   "translit": "Shabbathai",
+   "metal": "lead",
+   "day": "saturday",
+   "colors": {
+    "king": {
+     "name": "Indigo",
+     "hex": "#4b0082",
+     "hexNote": "display approximation of the named colour",
+     "status": "confirmed",
+     "sources": [
+      "777:XV"
+     ]
+    },
+    "queen": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Queen scale not verified against a 777 page scan; secondary sources disagree (esp. Mercury, Moon).",
+     "draft": "Black"
+    }
+   },
+   "sephirah": 3,
+   "path": 32,
+   "letters": {
+    "gd": "ת",
+    "gra": "ב",
+    "short": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    },
+    "long": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    },
+    "saadia": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    }
+   },
+   "hexagram": {
+    "value": "top",
+    "status": "confirmed",
+    "sources": [
+     "Regardie:Hexagram ritual"
+    ]
+   },
+   "sources": [
+    "777:XV",
+    "777:XLII",
+    "Agrippa:I.xxii-xxviii",
+    "research-doc:§1",
+    "Westcott1887",
+    "Kaplan1990"
+   ],
+   "confidence": "unconfirmed",
+   "unconfirmedFields": [
+    "colors.queen",
+    "letters.short",
+    "letters.long",
+    "letters.saadia"
+   ],
+   "esoteric": {
+    "hebrewLetter": {
+     "value": "ת",
+     "source": [
+      "777:I",
+      "Westcott1887",
+      "research-doc:§2"
+     ],
+     "status": "confirmed",
+     "system": "gd",
+     "variants": {
+      "gra": {
+       "value": "ב",
+       "source": [
+        "Kaplan1990",
+        "research-doc:§2"
+       ],
+       "status": "confirmed"
+      },
+      "short": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "long": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "saadia": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      }
+     }
+    },
+    "nameGematria": {
+     "value": 713,
+     "word": "שבתאי",
+     "method": "standard (mispar hechrachi)",
+     "source": [
+      "research-doc:§3"
+     ],
+     "status": "confirmed"
+    },
+    "tarot": {
+     "value": null,
+     "source": [
+      "777:XIV"
+     ],
+     "status": "UNCONFIRMED",
+     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+    }
+   }
+  },
+  {
+   "id": "jupiter",
+   "symbol": "♃",
+   "hebrewName": "צדק",
+   "translit": "Tzedek",
+   "metal": "tin",
+   "day": "thursday",
+   "colors": {
+    "king": {
+     "name": "Violet",
+     "hex": "#8a2be2",
+     "hexNote": "display approximation of the named colour",
+     "status": "confirmed",
+     "sources": [
+      "777:XV"
+     ]
+    },
+    "queen": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Queen scale not verified against a 777 page scan; secondary sources disagree (esp. Mercury, Moon).",
+     "draft": "Blue"
+    }
+   },
+   "sephirah": 4,
+   "path": 21,
+   "letters": {
+    "gd": "כ",
+    "gra": "ג",
+    "short": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    },
+    "long": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    },
+    "saadia": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    }
+   },
+   "hexagram": {
+    "value": null,
+    "status": "UNCONFIRMED",
+    "note": "Side-point placement (left/right) not verified against Regardie's diagram."
+   },
+   "sources": [
+    "777:XV",
+    "777:XLII",
+    "Agrippa:I.xxii-xxviii",
+    "research-doc:§1",
+    "Westcott1887",
+    "Kaplan1990"
+   ],
+   "confidence": "unconfirmed",
+   "unconfirmedFields": [
+    "colors.queen",
+    "letters.short",
+    "letters.long",
+    "letters.saadia",
+    "hexagram"
+   ],
+   "esoteric": {
+    "hebrewLetter": {
+     "value": "כ",
+     "source": [
+      "777:I",
+      "Westcott1887",
+      "research-doc:§2"
+     ],
+     "status": "confirmed",
+     "system": "gd",
+     "variants": {
+      "gra": {
+       "value": "ג",
+       "source": [
+        "Kaplan1990",
+        "research-doc:§2"
+       ],
+       "status": "confirmed"
+      },
+      "short": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "long": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "saadia": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      }
+     }
+    },
+    "nameGematria": {
+     "value": 194,
+     "word": "צדק",
+     "method": "standard (mispar hechrachi)",
+     "source": [
+      "research-doc:§3"
+     ],
+     "status": "confirmed"
+    },
+    "tarot": {
+     "value": null,
+     "source": [
+      "777:XIV"
+     ],
+     "status": "UNCONFIRMED",
+     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+    }
+   }
+  },
+  {
+   "id": "mars",
+   "symbol": "♂",
+   "hebrewName": "מאדים",
+   "translit": "Madim",
+   "metal": "iron",
+   "day": "tuesday",
+   "colors": {
+    "king": {
+     "name": "Scarlet",
+     "hex": "#ff2400",
+     "hexNote": "display approximation of the named colour",
+     "status": "confirmed",
+     "sources": [
+      "777:XV"
+     ]
+    },
+    "queen": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Queen scale not verified against a 777 page scan; secondary sources disagree (esp. Mercury, Moon).",
+     "draft": "Red"
+    }
+   },
+   "sephirah": 5,
+   "path": 27,
+   "letters": {
+    "gd": "פ",
+    "gra": "ד",
+    "short": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    },
+    "long": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    },
+    "saadia": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    }
+   },
+   "hexagram": {
+    "value": null,
+    "status": "UNCONFIRMED",
+    "note": "Side-point placement (left/right) not verified against Regardie's diagram."
+   },
+   "sources": [
+    "777:XV",
+    "777:XLII",
+    "Agrippa:I.xxii-xxviii",
+    "research-doc:§1",
+    "Westcott1887",
+    "Kaplan1990"
+   ],
+   "confidence": "unconfirmed",
+   "unconfirmedFields": [
+    "colors.queen",
+    "letters.short",
+    "letters.long",
+    "letters.saadia",
+    "hexagram"
+   ],
+   "esoteric": {
+    "hebrewLetter": {
+     "value": "פ",
+     "source": [
+      "777:I",
+      "Westcott1887",
+      "research-doc:§2"
+     ],
+     "status": "confirmed",
+     "system": "gd",
+     "variants": {
+      "gra": {
+       "value": "ד",
+       "source": [
+        "Kaplan1990",
+        "research-doc:§2"
+       ],
+       "status": "confirmed"
+      },
+      "short": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "long": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "saadia": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      }
+     }
+    },
+    "nameGematria": {
+     "value": 95,
+     "word": "מאדים",
+     "method": "standard (mispar hechrachi)",
+     "source": [
+      "research-doc:§3"
+     ],
+     "status": "confirmed"
+    },
+    "tarot": {
+     "value": null,
+     "source": [
+      "777:XIV"
+     ],
+     "status": "UNCONFIRMED",
+     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+    }
+   }
+  },
+  {
+   "id": "sun",
+   "symbol": "☉",
+   "hebrewName": "שמש",
+   "translit": "Shemesh",
+   "metal": "gold",
+   "day": "sunday",
+   "colors": {
+    "king": {
+     "name": "Orange",
+     "hex": "#ff8c00",
+     "hexNote": "display approximation of the named colour",
+     "status": "confirmed",
+     "sources": [
+      "777:XV"
+     ]
+    },
+    "queen": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Queen scale not verified against a 777 page scan; secondary sources disagree (esp. Mercury, Moon).",
+     "draft": "Gold yellow"
+    }
+   },
+   "sephirah": 6,
+   "path": 30,
+   "letters": {
+    "gd": "ר",
+    "gra": "כ",
+    "short": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    },
+    "long": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    },
+    "saadia": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    }
+   },
+   "hexagram": {
+    "value": "centre",
+    "status": "confirmed",
+    "sources": [
+     "Regardie:Hexagram ritual"
+    ]
+   },
+   "sources": [
+    "777:XV",
+    "777:XLII",
+    "Agrippa:I.xxii-xxviii",
+    "research-doc:§1",
+    "Westcott1887",
+    "Kaplan1990"
+   ],
+   "confidence": "unconfirmed",
+   "unconfirmedFields": [
+    "colors.queen",
+    "letters.short",
+    "letters.long",
+    "letters.saadia"
+   ],
+   "esoteric": {
+    "hebrewLetter": {
+     "value": "ר",
+     "source": [
+      "777:I",
+      "Westcott1887",
+      "research-doc:§2"
+     ],
+     "status": "confirmed",
+     "system": "gd",
+     "variants": {
+      "gra": {
+       "value": "כ",
+       "source": [
+        "Kaplan1990",
+        "research-doc:§2"
+       ],
+       "status": "confirmed"
+      },
+      "short": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "long": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "saadia": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      }
+     }
+    },
+    "nameGematria": {
+     "value": 640,
+     "word": "שמש",
+     "method": "standard (mispar hechrachi)",
+     "source": [
+      "research-doc:§3"
+     ],
+     "status": "confirmed"
+    },
+    "tarot": {
+     "value": null,
+     "source": [
+      "777:XIV"
+     ],
+     "status": "UNCONFIRMED",
+     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+    }
+   }
+  },
+  {
+   "id": "venus",
+   "symbol": "♀",
+   "hebrewName": "נוגה",
+   "translit": "Nogah",
+   "metal": "copper",
+   "day": "friday",
+   "colors": {
+    "king": {
+     "name": "Emerald green",
+     "hex": "#50c878",
+     "hexNote": "display approximation of the named colour",
+     "status": "confirmed",
+     "sources": [
+      "777:XV"
+     ]
+    },
+    "queen": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Queen scale not verified against a 777 page scan; secondary sources disagree (esp. Mercury, Moon).",
+     "draft": "Sky blue"
+    }
+   },
+   "sephirah": 7,
+   "path": 14,
+   "letters": {
+    "gd": "ד",
+    "gra": "פ",
+    "short": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    },
+    "long": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    },
+    "saadia": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    }
+   },
+   "hexagram": {
+    "value": null,
+    "status": "UNCONFIRMED",
+    "note": "Side-point placement (left/right) not verified against Regardie's diagram."
+   },
+   "sources": [
+    "777:XV",
+    "777:XLII",
+    "Agrippa:I.xxii-xxviii",
+    "research-doc:§1",
+    "Westcott1887",
+    "Kaplan1990"
+   ],
+   "confidence": "unconfirmed",
+   "unconfirmedFields": [
+    "colors.queen",
+    "letters.short",
+    "letters.long",
+    "letters.saadia",
+    "hexagram"
+   ],
+   "esoteric": {
+    "hebrewLetter": {
+     "value": "ד",
+     "source": [
+      "777:I",
+      "Westcott1887",
+      "research-doc:§2"
+     ],
+     "status": "confirmed",
+     "system": "gd",
+     "variants": {
+      "gra": {
+       "value": "פ",
+       "source": [
+        "Kaplan1990",
+        "research-doc:§2"
+       ],
+       "status": "confirmed"
+      },
+      "short": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "long": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "saadia": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      }
+     }
+    },
+    "nameGematria": {
+     "value": 64,
+     "word": "נוגה",
+     "method": "standard (mispar hechrachi)",
+     "source": [
+      "research-doc:§3"
+     ],
+     "status": "confirmed"
+    },
+    "tarot": {
+     "value": null,
+     "source": [
+      "777:XIV"
+     ],
+     "status": "UNCONFIRMED",
+     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+    }
+   }
+  },
+  {
+   "id": "mercury",
+   "symbol": "☿",
+   "hebrewName": "כוכב",
+   "translit": "Kokab",
+   "metal": "quicksilver",
+   "day": "wednesday",
+   "colors": {
+    "king": {
+     "name": "Yellow",
+     "hex": "#ffd700",
+     "hexNote": "display approximation of the named colour",
+     "status": "confirmed",
+     "sources": [
+      "777:XV"
+     ]
+    },
+    "queen": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Queen scale not verified against a 777 page scan; secondary sources disagree (esp. Mercury, Moon).",
+     "draft": "Purple"
+    }
+   },
+   "sephirah": 8,
+   "path": 12,
+   "letters": {
+    "gd": "ב",
+    "gra": "ר",
+    "short": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    },
+    "long": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    },
+    "saadia": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    }
+   },
+   "hexagram": {
+    "value": null,
+    "status": "UNCONFIRMED",
+    "note": "Side-point placement (left/right) not verified against Regardie's diagram."
+   },
+   "sources": [
+    "777:XV",
+    "777:XLII",
+    "Agrippa:I.xxii-xxviii",
+    "research-doc:§1",
+    "Westcott1887",
+    "Kaplan1990"
+   ],
+   "confidence": "unconfirmed",
+   "unconfirmedFields": [
+    "colors.queen",
+    "letters.short",
+    "letters.long",
+    "letters.saadia",
+    "hexagram"
+   ],
+   "esoteric": {
+    "hebrewLetter": {
+     "value": "ב",
+     "source": [
+      "777:I",
+      "Westcott1887",
+      "research-doc:§2"
+     ],
+     "status": "confirmed",
+     "system": "gd",
+     "variants": {
+      "gra": {
+       "value": "ר",
+       "source": [
+        "Kaplan1990",
+        "research-doc:§2"
+       ],
+       "status": "confirmed"
+      },
+      "short": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "long": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "saadia": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      }
+     }
+    },
+    "nameGematria": {
+     "value": 48,
+     "word": "כוכב",
+     "method": "standard (mispar hechrachi)",
+     "source": [
+      "research-doc:§3"
+     ],
+     "status": "confirmed"
+    },
+    "tarot": {
+     "value": null,
+     "source": [
+      "777:XIV"
+     ],
+     "status": "UNCONFIRMED",
+     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+    }
+   }
+  },
+  {
+   "id": "moon",
+   "symbol": "☽",
+   "hebrewName": "לבנה",
+   "translit": "Levanah",
+   "metal": "silver",
+   "day": "monday",
+   "colors": {
+    "king": {
+     "name": "Blue",
+     "hex": "#1e5bff",
+     "hexNote": "display approximation of the named colour",
+     "status": "confirmed",
+     "sources": [
+      "777:XV"
+     ]
+    },
+    "queen": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Queen scale not verified against a 777 page scan; secondary sources disagree (esp. Mercury, Moon).",
+     "draft": "Silver"
+    }
+   },
+   "sephirah": 9,
+   "path": 13,
+   "letters": {
+    "gd": "ג",
+    "gra": "ת",
+    "short": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    },
+    "long": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    },
+    "saadia": {
+     "value": null,
+     "status": "UNCONFIRMED",
+     "note": "Transcribe from Kaplan 1990 table; do not guess."
+    }
+   },
+   "hexagram": {
+    "value": "bottom",
+    "status": "confirmed",
+    "sources": [
+     "Regardie:Hexagram ritual"
+    ]
+   },
+   "sources": [
+    "777:XV",
+    "777:XLII",
+    "Agrippa:I.xxii-xxviii",
+    "research-doc:§1",
+    "Westcott1887",
+    "Kaplan1990"
+   ],
+   "confidence": "unconfirmed",
+   "unconfirmedFields": [
+    "colors.queen",
+    "letters.short",
+    "letters.long",
+    "letters.saadia"
+   ],
+   "esoteric": {
+    "hebrewLetter": {
+     "value": "ג",
+     "source": [
+      "777:I",
+      "Westcott1887",
+      "research-doc:§2"
+     ],
+     "status": "confirmed",
+     "system": "gd",
+     "variants": {
+      "gra": {
+       "value": "ת",
+       "source": [
+        "Kaplan1990",
+        "research-doc:§2"
+       ],
+       "status": "confirmed"
+      },
+      "short": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "long": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      },
+      "saadia": {
+       "value": null,
+       "source": [
+        "Kaplan1990"
+       ],
+       "status": "UNCONFIRMED",
+       "note": "Transcribe from Kaplan 1990 table; do not guess."
+      }
+     }
+    },
+    "nameGematria": {
+     "value": 87,
+     "word": "לבנה",
+     "method": "standard (mispar hechrachi)",
+     "source": [
+      "research-doc:§3"
+     ],
+     "status": "confirmed"
+    },
+    "tarot": {
+     "value": null,
+     "source": [
+      "777:XIV"
+     ],
+     "status": "UNCONFIRMED",
+     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+    }
+   }
+  }
+ ]
+}
