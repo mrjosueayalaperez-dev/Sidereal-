@@ -8,6 +8,7 @@ import { moonInfo } from './astro/moon.js';
 import { ayanamsa, fmt } from './astro/zodiac.js';
 import { aspects, DEFAULT_ORBS } from './astro/aspects.js';
 import { planetaryHours } from './astro/hours.js';
+import { natalSnapshot, snapshotText } from './astro/natal.js';
 import { renderWheel } from './render/wheel.js';
 import { renderTree, highlightTree, pathForPlanet } from './render/tree.js';
 import { decorateRows } from './ui/esoteric.js';
@@ -39,7 +40,9 @@ app.innerHTML = `<section class="card">
   <select id="ayan" aria-label="Ayanamsa">${ayanData.systems.map(a => `<option value="${a.id}">${a.label}</option>`).join('')}</select><span id="ayanOut"></span></div>
  <div id="wheel" style="max-width:520px"></div><table id="signs"></table>
  <h2>Aspects</h2><div class="row" id="orbs">${Object.entries(DEFAULT_ORBS).map(([k, v]) => `<label>${k} orb <input type="number" min="0" max="15" step="0.5" value="${v}" data-orb="${k}" style="width:4em"></label>`).join('')}</div>
- <table id="aspects"></table></section>
+ <table id="aspects"></table>
+ <h2>Natal snapshot <span class="muted" style="font-size:13px">(signs only; houses &amp; 3D view deferred)</span></h2>
+ <button id="natalBtn">Snapshot this moment</button> <button id="natalCopy">Copy as text</button><pre id="natal" style="white-space:pre-wrap;font-size:13px"></pre></section>
 <section class="card" id="side"><div class="row" role="group" aria-label="Select planet">${planets.map(p => `<button data-planet="${p.id}" aria-label="${p.symbol} ${p.id}">${p.symbol}</button>`).join('')}</div>
  <div id="panel"></div>
  <h2>Planetary hours</h2><div class="row"><label>Lat <input id="lat" type="number" step="0.0001" min="-90" max="90" style="width:7em"></label><label>Lon <input id="lon" type="number" step="0.0001" min="-180" max="180" style="width:7em"></label>
@@ -128,5 +131,8 @@ function renderHours(s) { const lat = parseFloat($('lat').value), lon = parseFlo
     r.hours.map(h => `<tr${h === cur ? ' style="color:#d4af37" aria-current="true"' : ''}><td>${h.part} ${h.n}</td><td>${f(h.start)}</td><td>${GLYPH[h.ruler]} ${h.ruler}</td></tr>`).join('') + '</table>'; window.__hours = r; }
 $('lat').onchange = $('lon').onchange = () => renderHours(store.get());
 $('geoloc').onclick = () => navigator.geolocation?.getCurrentPosition(p => { $('lat').value = p.coords.latitude.toFixed(4); $('lon').value = p.coords.longitude.toFixed(4); renderHours(store.get()); }, e => { $('hours').textContent = 'Location unavailable: ' + e.message + ' — enter lat/lon manually.'; });
+const snap = () => natalSnapshot(store.get().t, { zodiac: store.get().zodiac, ayanData, ayan: store.get().ayan });
+$('natalBtn').onclick = () => { $('natal').textContent = snapshotText(snap()); };
+$('natalCopy').onclick = async () => { const t = snapshotText(snap()); $('natal').textContent = t; try { await navigator.clipboard.writeText(t); } catch {} };
 export { store };
 render(store.get());
