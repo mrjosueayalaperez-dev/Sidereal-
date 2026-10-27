@@ -1,7 +1,11 @@
 import { helio, geo, lowPrecision } from './ephemeris.js';
 import { drawOrrery, PLANETS } from './render/orrery.js';
 import { parse, serialize, createStore, SPEEDS } from './state.js';
-const presetsData = await (await fetch(new URL('../data/presets.json', import.meta.url))).json();
+import { makeGematria } from './gematria.js';
+import { renderPanel } from './ui/panel.js';
+const J = f => fetch(new URL(`../data/${f}.json`, import.meta.url)).then(r => r.json());
+const [presetsData, { planets }, { letters }, { sephirot }, { paths }, { sources }] = await Promise.all(['presets', 'planets', 'letters', 'sephirot', 'paths', 'sources'].map(J));
+const gem = makeGematria(letters);
 const app = document.getElementById('app');
 app.innerHTML = `<section class="card">
  <div class="row" role="group" aria-label="Time controls">
@@ -16,7 +20,8 @@ app.innerHTML = `<section class="card">
   <span id="presetInfo" class="muted"></span></div>
  <p class="disclaimer" id="presetDisclaimer" role="note">${presetsData.disclaimer}</p>
  <canvas id="orrery" width="800" height="800" aria-label="Orrery"></canvas></section>
-<section class="card" id="side"><h2 id="when"></h2><table id="pos"></table></section>`;
+<section class="card" id="side"><div class="row" role="group" aria-label="Select planet">${planets.map(p => `<button data-planet="${p.id}" aria-label="${p.id}">${p.symbol}</button>`).join('')}</div>
+ <div id="panel"></div><h2 id="when"></h2><table id="pos"></table></section>`;
 const $ = id => document.getElementById(id);
 const init = parse(location.search); if (!init.t) init.t = new Date();
 const store = createStore(init); let rate = 0, last = 0, hits = [];
@@ -35,6 +40,8 @@ function render(s) {
   $('tz').value = s.tz; $('when').textContent = s.t.toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
   $('prec').innerHTML = lowPrecision(s.t) ? '<span class="badge">low precision (outside 1800–2200)</span>' : '';
   $('pos').innerHTML = '<tr><th>Body</th><th>Lon°</th><th>AU</th></tr>' + Object.entries(pos).map(([id, p]) => `<tr><td>${id}</td><td>${p.lon.toFixed(2)}</td><td>${p.dist.toFixed(3)}</td></tr>`).join('');
+  renderPanel($('panel'), { planet: planets.find(p => p.id === s.sel), letters, sephirot, gem, version: s.letters, sources });
+  document.querySelectorAll('[data-planet]').forEach(b => b.setAttribute('aria-pressed', b.dataset.planet === s.sel));
   history.replaceState(null, '', '?' + serialize(s));
   window.__sidereal = { state: s, positions: pos, hits, rate };
 }
@@ -53,5 +60,10 @@ $('preset').onchange = e => { const p = presetsData.presets.find(x => x.id === e
   const t = p.tz === 'local' ? new Date(`${p.date}T${p.time}`) : new Date(`${p.date}T${p.time}:00Z`);
   $('presetInfo').innerHTML = (p.figure || p.figureDraft || p.note || '') + (p.status === 'UNCONFIRMED' ? ' <span class="badge">UNCONFIRMED</span>' : '') + (p.sources[0]?.startsWith('http') ? ` <a href="${p.sources[0]}" target="_blank" rel="noopener">source</a>` : '');
   rate = 0; syncPlay(); store.set({ t }); };
+document.querySelectorAll('[data-planet]').forEach(b => b.onclick = () => store.set({ sel: b.dataset.planet }));
+$('panel').addEventListener('change', e => { if (e.target.name === 'lv') store.set({ letters: e.target.value }); });
+$('orrery').addEventListener('click', e => { const c = $('orrery'), r = c.getBoundingClientRect(), x = (e.clientX - r.left) * c.width / r.width, y = (e.clientY - r.top) * c.height / r.height;
+  const h = hits.find(h => Math.hypot(h.x - x, h.y - y) < h.r) || (store.get().view === 'helio' && Math.hypot(c.width / 2 - x, c.height / 2 - y) < 14 ? { id: 'sun' } : null);
+  if (h && planets.some(p => p.id === h.id)) store.set({ sel: h.id }); });
 export { store };
 render(store.get());
