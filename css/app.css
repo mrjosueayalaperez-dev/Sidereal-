@@ -14,3 +14,4 @@ a{color:var(--gold)}
 .muted{color:var(--muted)}table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid #2a2618;padding:3px 4px;text-align:left;font-size:13px}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .row{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:4px 0}
+.heb{font-size:20px}.esoteric th{width:45%}.eso{font-size:12px;color:var(--muted)}
