@@ -1,14 +1,17 @@
 import { helio, geo, lowPrecision } from './ephemeris.js';
-import { drawOrrery, PLANETS } from './render/orrery.js';
+import { drawOrrery, PLANETS, GLYPH } from './render/orrery.js';
 import { parse, serialize, createStore, SPEEDS } from './state.js';
 import { makeGematria } from './gematria.js';
 import { renderPanel } from './ui/panel.js';
 import { isRetro } from './astro/retro.js';
 import { moonInfo } from './astro/moon.js';
+import { ayanamsa, fmt } from './astro/zodiac.js';
+import { renderWheel } from './render/wheel.js';
 import { renderTree, highlightTree, pathForPlanet } from './render/tree.js';
 import { decorateRows } from './ui/esoteric.js';
 const J = f => fetch(new URL(`../data/${f}.json`, import.meta.url)).then(r => r.json());
-const [presetsData, { planets }, { letters }, { sephirot }, { paths }, { sources }, registry] = await Promise.all(['presets', 'planets', 'letters', 'sephirot', 'paths', 'sources', 'esoteric-registry'].map(J));
+const [presetsData, { planets }, { letters }, { sephirot }, { paths }, { sources }, ayanJson, registry] = await Promise.all(['presets', 'planets', 'letters', 'sephirot', 'paths', 'sources', 'ayanamsa', 'esoteric-registry'].map(J));
+const ayanData = ayanJson;
 const gem = makeGematria(letters);
 const app = document.getElementById('app');
 app.innerHTML = `<section class="card">
@@ -24,7 +27,11 @@ app.innerHTML = `<section class="card">
  <div class="row" id="presetRow"><label>Preset <select id="preset"><option value="">—</option>${presetsData.presets.map(p => `<option value="${p.id}">${p.label} (${p.date})</option>`).join('')}</select></label>
   <span id="presetInfo" class="muted"></span></div>
  <p class="disclaimer" id="presetDisclaimer" role="note">${presetsData.disclaimer}</p>
- <canvas id="orrery" width="800" height="800" aria-label="Orrery"></canvas></section>
+ <canvas id="orrery" width="800" height="800" aria-label="Orrery"></canvas>
+ <h2>Zodiac wheel (geocentric)</h2>
+ <div class="row"><select id="zodiac" aria-label="Zodiac"><option value="tropical">Tropical</option><option value="sidereal">Sidereal</option></select>
+  <select id="ayan" aria-label="Ayanamsa">${ayanData.systems.map(a => `<option value="${a.id}">${a.label}</option>`).join('')}</select><span id="ayanOut"></span></div>
+ <div id="wheel" style="max-width:520px"></div><table id="signs"></table></section>
 <section class="card" id="side"><div class="row" role="group" aria-label="Select planet">${planets.map(p => `<button data-planet="${p.id}" aria-label="${p.id}">${p.symbol}</button>`).join('')}</div>
  <div id="panel"></div>
  <h2>Tree of Life</h2><p class="muted" style="font-size:12px">Dashed paths (?) = endpoints UNCONFIRMED. Path letters per GD/777.</p><div id="tree"></div><p id="pathInfo" class="muted" aria-live="polite"></p><h2 id="when"></h2><p id="moon"></p><table id="pos"></table></section>`;
@@ -45,6 +52,14 @@ function render(s) {
   if (document.activeElement !== $('dt')) $('dt').value = toInput(s.t, s.tz);
   $('tz').value = s.tz; $('when').textContent = s.t.toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
   $('prec').innerHTML = lowPrecision(s.t) ? '<span class="badge">low precision (outside 1800–2200)</span>' : '';
+  { const g = Object.fromEntries(['sun', 'moon', 'mercury', 'venus', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune'].map(id => [id, { ...geo(id, s.t), retro: isRetro(id, s.t) }]));
+    const ay = s.zodiac === 'sidereal' ? ayanamsa(ayanData, s.ayan, s.t) : null; const off = ay?.deg ?? 0;
+    const shown = Object.fromEntries(Object.entries(g).map(([k, v]) => [k, { ...v, lon: ((v.lon - off) % 360 + 360) % 360 }]));
+    $('zodiac').value = s.zodiac; $('ayan').value = s.ayan; $('ayan').disabled = s.zodiac !== 'sidereal';
+    $('ayanOut').innerHTML = ay ? `ayanamsa ${ay.deg.toFixed(4)}° <span class="badge" title="${ayanData.note}">UNCONFIRMED constants</span>` : '';
+    renderWheel($('wheel'), shown, { glyphs: GLYPH, label: `${s.zodiac} zodiac wheel` });
+    $('signs').innerHTML = `<caption class="muted">${s.zodiac} positions${ay ? ' (sidereal results use UNCONFIRMED ayanamsa constants)' : ''}</caption>` + Object.entries(shown).map(([k, v]) => `<tr data-sign="${k}"><td>${GLYPH[k]} ${k}</td><td>${fmt(v.lon)}${v.retro ? ' ℞' : ''}</td></tr>`).join('');
+    window.__wheel = shown; }
   $('view').value = s.view; const m = moonInfo(s.t);
   $('moon').innerHTML = `☽ ${m.name} — ${(m.illumination * 100).toFixed(1)}% illuminated (phase angle ${m.phase.toFixed(1)}°)`;
   $('pos').innerHTML = `<caption class="muted">${s.view === 'geo' ? 'Geocentric apparent' : 'Heliocentric'} ecliptic longitude (of date)</caption><tr><th>Body</th><th>Lon°</th><th>AU</th><th>Motion</th></tr>` + Object.entries(pos).map(([id, p]) => `<tr data-body="${id}"><td>${id}</td><td>${p.lon.toFixed(2)}</td><td>${p.dist.toFixed(3)}</td><td>${s.view === 'geo' ? (p.retro ? '℞ retrograde' : 'direct') : '—'}</td></tr>`).join('');
@@ -58,6 +73,8 @@ function render(s) {
 renderTree($('tree'), { sephirot, paths, onPath: p => { $('pathInfo').textContent = `Path ${p.n} ${p.letter}: ${p.attribution.type} ${p.attribution.id}${p.status ? ' — UNCONFIRMED endpoints: ' + p.note : ''}`; } });
 store.sub(render);
 $('dt').addEventListener('change', e => { const t = fromInput(e.target.value, store.get().tz); if (!isNaN(t)) store.set({ t }); });
+$('zodiac').addEventListener('change', e => store.set({ zodiac: e.target.value }));
+$('ayan').addEventListener('change', e => store.set({ ayan: e.target.value }));
 $('view').addEventListener('change', e => store.set({ view: e.target.value }));
 $('tz').addEventListener('change', e => store.set({ tz: e.target.value }));
 $('now').onclick = () => { rate = 0; store.set({ t: new Date() }); syncPlay(); };
