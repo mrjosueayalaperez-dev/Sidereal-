@@ -7,6 +7,7 @@ import { isRetro } from './astro/retro.js';
 import { moonInfo } from './astro/moon.js';
 import { ayanamsa, fmt } from './astro/zodiac.js';
 import { aspects, DEFAULT_ORBS } from './astro/aspects.js';
+import { planetaryHours } from './astro/hours.js';
 import { renderWheel } from './render/wheel.js';
 import { renderTree, highlightTree, pathForPlanet } from './render/tree.js';
 const J = f => fetch(new URL(`../data/${f}.json`, import.meta.url)).then(r => r.json());
@@ -40,6 +41,8 @@ app.innerHTML = `<section class="card">
  <table id="aspects"></table></section>
 <section class="card" id="side"><div class="row" role="group" aria-label="Select planet">${planets.map(p => `<button data-planet="${p.id}" aria-label="${p.symbol} ${p.id}">${p.symbol}</button>`).join('')}</div>
  <div id="panel"></div>
+ <h2>Planetary hours</h2><div class="row"><label>Lat <input id="lat" type="number" step="0.0001" min="-90" max="90" style="width:7em"></label><label>Lon <input id="lon" type="number" step="0.0001" min="-180" max="180" style="width:7em"></label>
+  <button id="geoloc">Use my location</button></div><p class="muted" style="font-size:12px">Location is used only in this browser and is not put in the share URL. Traditional/educational.</p><div id="hours"></div>
  <h2>Tree of Life</h2><p class="muted" style="font-size:12px">Dashed paths (?) = endpoints UNCONFIRMED. Path letters per GD/777.</p><div id="tree"></div><p id="pathInfo" class="muted" aria-live="polite"></p><h2 id="when"></h2><p id="moon"></p><table id="pos"></table></section>`;
 const $ = id => document.getElementById(id);
 const init = parse(location.search); if (!init.t) init.t = new Date();
@@ -69,6 +72,7 @@ function render(s) {
     const asp = aspects(Object.fromEntries(Object.entries(g).map(([k, v]) => [k, v.lon])), orbs);
     $('aspects').innerHTML = '<tr><th>Pair</th><th>Aspect</th><th>Orb</th></tr>' + (asp.map(x => `<tr data-aspect="${x.a}-${x.b}"><td>${GLYPH[x.a]} ${x.a} – ${GLYPH[x.b]} ${x.b}</td><td>${x.glyph} ${x.type}</td><td>${x.orb.toFixed(2)}°</td></tr>`).join('') || '<tr><td colspan="3">none</td></tr>');
     window.__wheel = shown; window.__aspects = asp; }
+  renderHours(s);
   $('view').value = s.view; const m = moonInfo(s.t);
   $('moon').innerHTML = `☽ ${m.name} — ${(m.illumination * 100).toFixed(1)}% illuminated (phase angle ${m.phase.toFixed(1)}°)`;
   $('pos').innerHTML = `<caption class="muted">${s.view === 'geo' ? 'Geocentric apparent' : 'Heliocentric'} ecliptic longitude (of date)</caption><tr><th>Body</th><th>Lon°</th><th>AU</th><th>Motion</th></tr>` + Object.entries(pos).map(([id, p]) => `<tr data-body="${id}"><td>${id}</td><td>${p.lon.toFixed(2)}</td><td>${p.dist.toFixed(3)}</td><td>${s.view === 'geo' ? (p.retro ? '℞ retrograde' : 'direct') : '—'}</td></tr>`).join('');
@@ -112,5 +116,15 @@ $('png').onclick = () => $('orrery').toBlob(b => { const a = document.createElem
 $('share').onclick = async () => { try { await navigator.clipboard.writeText(location.href); $('share').textContent = 'Link copied'; } catch { prompt('Share link', location.href); } };
 const mq = matchMedia('(prefers-reduced-motion: reduce)'); $('reduced').checked = mq.matches;
 // Reduced motion: playback steps once per second instead of continuously.
+function renderHours(s) { const lat = parseFloat($('lat').value), lon = parseFloat($('lon').value);
+  if (!isFinite(lat) || !isFinite(lon)) { $('hours').innerHTML = '<p class="muted">Enter latitude/longitude (or use your location) to compute hours.</p>'; return; }
+  const ymd = new Date(s.t.getTime() + lon / 15 * 3600e3).toISOString().slice(0, 10), r = planetaryHours(ymd, lat, lon);
+  if (r.error) { $('hours').textContent = r.error; return; }
+  const f = d => s.tz === 'utc' ? d.toISOString().slice(11, 16) + 'Z' : d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  const cur = r.hours.find(h => s.t >= h.start && s.t < h.end);
+  $('hours').innerHTML = `<p>${ymd} (day ruler ${GLYPH[r.dayRuler]} ${r.dayRuler}); sunrise ${f(r.sunrise)}, sunset ${f(r.sunset)}</p><table id="hoursTable"><tr><th>#</th><th>Start</th><th>Ruler</th></tr>` +
+    r.hours.map(h => `<tr${h === cur ? ' style="color:#d4af37" aria-current="true"' : ''}><td>${h.part} ${h.n}</td><td>${f(h.start)}</td><td>${GLYPH[h.ruler]} ${h.ruler}</td></tr>`).join('') + '</table>'; window.__hours = r; }
+$('lat').onchange = $('lon').onchange = () => renderHours(store.get());
+$('geoloc').onclick = () => navigator.geolocation?.getCurrentPosition(p => { $('lat').value = p.coords.latitude.toFixed(4); $('lon').value = p.coords.longitude.toFixed(4); renderHours(store.get()); }, e => { $('hours').textContent = 'Location unavailable: ' + e.message + ' — enter lat/lon manually.'; });
 export { store };
 render(store.get());
