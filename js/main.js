@@ -24,18 +24,22 @@ app.innerHTML = `<section class="card">
   <select id="speed" aria-label="Speed per second">${Object.keys(SPEEDS).map(k => `<option value="${k}" ${k === '1d' ? 'selected' : ''}>${k}/s</option>`).join('')}</select>
   <select id="view" aria-label="Centre"><option value="helio">Heliocentric</option><option value="geo">Geocentric</option></select>
   <span id="prec"></span>
+  <button id="png">Export PNG</button><button id="share">Copy share link</button>
+  <label><input type="checkbox" id="reduced"> Reduced motion</label>
  </div>
  <div class="row" id="presetRow"><label>Preset <select id="preset"><option value="">—</option>${presetsData.presets.map(p => `<option value="${p.id}">${p.label} (${p.date})</option>`).join('')}</select></label>
   <span id="presetInfo" class="muted"></span></div>
  <p class="disclaimer" id="presetDisclaimer" role="note">${presetsData.disclaimer}</p>
- <canvas id="orrery" width="800" height="800" aria-label="Orrery"></canvas>
+ <p class="muted" id="kbdHelp" style="font-size:12px">Keyboard: focus the orrery and use ←/→ (±1 day), Shift+←/→ (±30 days), ↑/↓ (±1 hour), Home = now. A text table of all positions is alongside.</p>
+ <canvas id="orrery" width="800" height="800" tabindex="0" role="img" aria-label="Orrery; use arrow keys to change the date" aria-describedby="kbdHelp"></canvas>
+ <div id="live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
  <h2>Zodiac wheel (geocentric)</h2>
  <div class="row"><select id="zodiac" aria-label="Zodiac"><option value="tropical">Tropical</option><option value="sidereal">Sidereal</option></select>
   <select id="ayan" aria-label="Ayanamsa">${ayanData.systems.map(a => `<option value="${a.id}">${a.label}</option>`).join('')}</select><span id="ayanOut"></span></div>
  <div id="wheel" style="max-width:520px"></div><table id="signs"></table>
  <h2>Aspects</h2><div class="row" id="orbs">${Object.entries(DEFAULT_ORBS).map(([k, v]) => `<label>${k} orb <input type="number" min="0" max="15" step="0.5" value="${v}" data-orb="${k}" style="width:4em"></label>`).join('')}</div>
  <table id="aspects"></table></section>
-<section class="card" id="side"><div class="row" role="group" aria-label="Select planet">${planets.map(p => `<button data-planet="${p.id}" aria-label="${p.id}">${p.symbol}</button>`).join('')}</div>
+<section class="card" id="side"><div class="row" role="group" aria-label="Select planet">${planets.map(p => `<button data-planet="${p.id}" aria-label="${p.symbol} ${p.id}">${p.symbol}</button>`).join('')}</div>
  <div id="panel"></div>
  <h2>Tree of Life</h2><p class="muted" style="font-size:12px">Dashed paths (?) = endpoints UNCONFIRMED. Path letters per GD/777.</p><div id="tree"></div><p id="pathInfo" class="muted" aria-live="polite"></p><h2 id="when"></h2><p id="moon"></p><table id="pos"></table></section>`;
 const $ = id => document.getElementById(id);
@@ -77,6 +81,8 @@ function render(s) {
   window.__sidereal = { state: s, positions: pos, hits, rate };
 }
 renderTree($('tree'), { sephirot, paths, onPath: p => { $('pathInfo').textContent = `Path ${p.n} ${p.letter}: ${p.attribution.type} ${p.attribution.id}${p.status ? ' — UNCONFIRMED endpoints: ' + p.note : ''}`; } });
+let liveTimer; store.sub(s => { clearTimeout(liveTimer); liveTimer = setTimeout(() => { const p = window.__sidereal.positions;
+  $('live').textContent = `${s.t.toISOString().slice(0, 16).replace('T', ' ')} UTC. ` + Object.entries(p).map(([k, v]) => `${k} ${v.lon.toFixed(0)} degrees${v.retro ? ' retrograde' : ''}`).join(', '); }, rate ? 1500 : 300); });
 store.sub(render);
 $('dt').addEventListener('change', e => { const t = fromInput(e.target.value, store.get().tz); if (!isNaN(t)) store.set({ t }); });
 $('orbs').addEventListener('change', () => render(store.get()));
@@ -90,7 +96,7 @@ $('play').onclick = () => { rate = rate > 0 ? 0 : speed(); syncPlay(); };
 $('rew').onclick = () => { rate = rate < 0 ? 0 : -speed(); syncPlay(); };
 $('speed').onchange = () => { if (rate) rate = Math.sign(rate) * speed(); syncPlay(); };
 function syncPlay() { $('play').textContent = rate > 0 ? '❚❚' : '▶'; $('rew').textContent = rate < 0 ? '❚❚' : '◀◀'; last = performance.now(); if (rate) requestAnimationFrame(tick); }
-function tick(now) { if (!rate || document.hidden) return; const dt = (now - last) / 1000; last = now; store.set({ t: new Date(store.get().t.getTime() + rate * dt) }); requestAnimationFrame(tick); }
+function tick(now) { if (!rate || document.hidden) return; if (document.getElementById('reduced').checked && now - last < 1000) { requestAnimationFrame(tick); return; } const dt = (now - last) / 1000; last = now; store.set({ t: new Date(store.get().t.getTime() + rate * dt) }); requestAnimationFrame(tick); }
 document.addEventListener('visibilitychange', () => { if (!document.hidden && rate) syncPlay(); });
 $('preset').onchange = e => { const p = presetsData.presets.find(x => x.id === e.target.value); if (!p) return;
   const t = p.tz === 'local' ? new Date(`${p.date}T${p.time}`) : new Date(`${p.date}T${p.time}:00Z`);
@@ -101,5 +107,12 @@ $('panel').addEventListener('change', e => { if (e.target.name === 'lv') store.s
 $('orrery').addEventListener('click', e => { const c = $('orrery'), r = c.getBoundingClientRect(), x = (e.clientX - r.left) * c.width / r.width, y = (e.clientY - r.top) * c.height / r.height;
   const h = hits.find(h => Math.hypot(h.x - x, h.y - y) < h.r) || (store.get().view === 'helio' && Math.hypot(c.width / 2 - x, c.height / 2 - y) < 14 ? { id: 'sun' } : null);
   if (h && planets.some(p => p.id === h.id)) store.set({ sel: h.id }); });
+$('orrery').addEventListener('keydown', e => { const H = 3600e3, D = 864e5, t = store.get().t.getTime();
+  const d = { ArrowRight: e.shiftKey ? 30 * D : D, ArrowLeft: -(e.shiftKey ? 30 * D : D), ArrowUp: H, ArrowDown: -H }[e.key];
+  if (d) { e.preventDefault(); store.set({ t: new Date(t + d) }); } else if (e.key === 'Home') { e.preventDefault(); store.set({ t: new Date() }); } });
+$('png').onclick = () => $('orrery').toBlob(b => { const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = `sidereal-${store.get().t.toISOString().slice(0, 16).replace(':', '')}.png`; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000); });
+$('share').onclick = async () => { try { await navigator.clipboard.writeText(location.href); $('share').textContent = 'Link copied'; } catch { prompt('Share link', location.href); } };
+const mq = matchMedia('(prefers-reduced-motion: reduce)'); $('reduced').checked = mq.matches;
+// Reduced motion: playback steps once per second instead of continuously.
 export { store };
 render(store.get());
