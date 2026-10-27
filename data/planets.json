@@ -122,12 +122,11 @@
      "status": "confirmed"
     },
     "tarot": {
-     "value": null,
+     "value": "The Universe/World (XXI)",
      "source": [
-      "777:XIV"
+      "GD:tarot"
      ],
-     "status": "UNCONFIRMED",
-     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+     "status": "confirmed-by-owner"
     }
    }
   },
@@ -252,12 +251,11 @@
      "status": "confirmed"
     },
     "tarot": {
-     "value": null,
+     "value": "Wheel of Fortune (X)",
      "source": [
-      "777:XIV"
+      "GD:tarot"
      ],
-     "status": "UNCONFIRMED",
-     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+     "status": "confirmed-by-owner"
     }
    }
   },
@@ -382,12 +380,11 @@
      "status": "confirmed"
     },
     "tarot": {
-     "value": null,
+     "value": "The Tower (XVI)",
      "source": [
-      "777:XIV"
+      "GD:tarot"
      ],
-     "status": "UNCONFIRMED",
-     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+     "status": "confirmed-by-owner"
     }
    }
   },
@@ -513,12 +510,11 @@
      "status": "confirmed"
     },
     "tarot": {
-     "value": null,
+     "value": "The Sun (XIX)",
      "source": [
-      "777:XIV"
+      "GD:tarot"
      ],
-     "status": "UNCONFIRMED",
-     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+     "status": "confirmed-by-owner"
     }
    }
   },
@@ -643,12 +639,11 @@
      "status": "confirmed"
     },
     "tarot": {
-     "value": null,
+     "value": "The Empress (III)",
      "source": [
-      "777:XIV"
+      "GD:tarot"
      ],
-     "status": "UNCONFIRMED",
-     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+     "status": "confirmed-by-owner"
     }
    }
   },
@@ -773,12 +768,11 @@
      "status": "confirmed"
     },
     "tarot": {
-     "value": null,
+     "value": "The Magician (I)",
      "source": [
-      "777:XIV"
+      "GD:tarot"
      ],
-     "status": "UNCONFIRMED",
-     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+     "status": "confirmed-by-owner"
     }
    }
   },
@@ -904,12 +898,11 @@
      "status": "confirmed"
     },
     "tarot": {
-     "value": null,
+     "value": "The High Priestess (II)",
      "source": [
-      "777:XIV"
+      "GD:tarot"
      ],
-     "status": "UNCONFIRMED",
-     "note": "Tarot attribution is not in the research doc (SIDEREAL_RESEARCH_2026-10-26.md); verify against Liber 777 before filling."
+     "status": "confirmed-by-owner"
     }
    }
   }

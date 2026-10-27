@@ -8,7 +8,7 @@ const card = (planet, version = 'gd') => { const el = { innerHTML: '' }; renderP
 test('each planet card carries planet + letter + gematria + tarot by default', () => {
   for (const p of planets) { const h = card(p);
     assert.ok(h.includes(p.symbol)); assert.match(h, new RegExp(`data-eso="hebrewLetter"[^]*${p.letters.gd}`)); assert.match(h, new RegExp(`data-eso="nameGematria"><th[^]*?<td>${DOC[p.id]} `));
-    assert.match(h, /data-eso="tarot"[^]*UNCONFIRMED/); }
+    const tarotRow = h.match(/<tr data-eso="tarot">.*?<\/tr>/)[0]; assert.ok(tarotRow.includes(p.esoteric.tarot.value.replace(/[&<>"]/g, '')), p.id); assert.doesNotMatch(tarotRow, /UNCONFIRMED/); }
 });
 test('no visibility toggle in the card: no checkbox/switch/aria-expanded/details around esoteric; only attribution radios', () => {
   for (const p of planets) { const h = card(p);
@@ -18,6 +18,9 @@ test('no visibility toggle in the card: no checkbox/switch/aria-expanded/details
 });
 test('Gra switches attribution (value), not visibility', () => { const s = planets.find(p => p.id === 'saturn');
   assert.match(card(s, 'gd'), /data-eso="hebrewLetter"[^]*?ת/); const g = card(s, 'gra'); assert.match(g, /data-eso="hebrewLetter"><th[^]*?\(GRA\)[^]*?ב/); assert.ok(g.includes('data-eso="tarot"')); });
+test('confirmed-by-owner renders value without UNCONFIRMED badge', () => {
+  const reg = { fields: [{ key: 'x', label: 'X', format: 'text' }] }; const h = renderEsoteric({ id: 'p', esoteric: { x: { value: 'V', source: ['s'], status: 'confirmed-by-owner' } } }, reg);
+  assert.match(h, /<td>V<\/td>/); assert.doesNotMatch(h, /UNCONFIRMED/); });
 test('generic rendering: a new dummy field needs only data + a registry entry', () => {
   const reg = { fields: [...registry.fields, { key: 'dummyElement', label: 'Dummy element', format: 'text' }] };
   const p = { ...planets[0], esoteric: { ...planets[0].esoteric, dummyElement: { value: 'Quintessence', source: ['test'], status: 'confirmed' } } };

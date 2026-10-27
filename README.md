@@ -21,9 +21,9 @@ Every planet carries its correspondences in `data/planets.json` under `planet.es
 planet (info card and every table row naming a planet). There is no on/off toggle. The GD/Gra control only switches
 *which* letter attribution is shown.
 
-Each field is `{ "value": …, "source": ["<key in data/sources.json>"], "status": "confirmed" | "UNCONFIRMED", "note"?: … }`.
+Each field is `{ "value": …, "source": ["<key in data/sources.json>"], "status": "confirmed" | "confirmed-by-owner" | "UNCONFIRMED", "note"?: … }`.
 UNCONFIRMED fields keep `value: null` and are shown blank with a badge. Current fields: `hebrewLetter` (with `variants.gra`
-etc.), `nameGematria` (doc §3), `tarot` (UNCONFIRMED, not in the research doc).
+etc.), `nameGematria` (doc §3), `tarot` (Golden Dawn attribution, `confirmed-by-owner`).
 
 **To add a new esoteric element (data only, no code):**
 1. Add `"myField": {"value": …, "source": [...], "status": "confirmed"}` (or `null` + `"UNCONFIRMED"` + `note`) to `esoteric` for **all 7 planets**.
