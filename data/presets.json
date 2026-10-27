@@ -1,0 +1,11 @@
+{
+ "disclaimer": "Educational only. Planetary positions do not cause market moves, and nothing here is financial advice or a prediction.",
+ "presets": [
+  {"id":"birthday","label":"Josue's birthday (time unknown, 12:00 local default)","date":"1977-03-17","time":"12:00","tz":"local","kind":"personal","note":"user-supplied; time unknown, editable","sources":["owner:Josue"],"confidence":"confirmed"},
+  {"id":"black-tuesday","label":"Black Tuesday","date":"1929-10-29","time":"12:00","tz":"UTC","kind":"market","figure":"DJIA −11.7%","sources":["https://www.federalreservehistory.org/essays/stock-market-crash-of-1929"],"confidence":"confirmed","note":"figure from research doc citing Federal Reserve History; spot-check before shipping"},
+  {"id":"black-monday","label":"Black Monday","date":"1987-10-19","time":"12:00","tz":"UTC","kind":"market","figure":"DJIA −22.6%","sources":["https://www.federalreservehistory.org/essays/stock-market-crash-of-1987"],"confidence":"confirmed","note":"figure from research doc citing Federal Reserve History; spot-check before shipping"},
+  {"id":"dotcom-peak","label":"Dot-com peak","date":"2000-03-10","time":"12:00","tz":"UTC","kind":"market","figure":null,"figureDraft":"Nasdaq closing high 5,048.62","sources":["research-doc §5 (no primary link)"],"confidence":"unconfirmed","status":"UNCONFIRMED","note":"Figure not yet linked to a primary source."},
+  {"id":"crash-2008","label":"2008 crash day","date":"2008-09-29","time":"12:00","tz":"UTC","kind":"market","figure":null,"figureDraft":"DJIA −777.68 points after House rejected TARP","sources":["research-doc §5 (no primary link)"],"confidence":"unconfirmed","status":"UNCONFIRMED","note":"Figure not yet linked to a primary source."},
+  {"id":"covid-crash","label":"COVID crash","date":"2020-03-16","time":"12:00","tz":"UTC","kind":"market","figure":null,"figureDraft":"DJIA −12.9% (−2,997 pts)","sources":["research-doc §5 (no primary link)"],"confidence":"unconfirmed","status":"UNCONFIRMED","note":"Research doc gives no source URL; treat as unconfirmed until linked."}
+ ]
+}
